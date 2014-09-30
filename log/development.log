@@ -1,0 +1,2565 @@
+  [1m[36m (32.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (108.2ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20140929223638)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (103.5ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140929223638"]]
+  [1m[36m (15.9ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.9ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.8ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (23.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (87.1ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20140929223638)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (132.2ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "name" character varying(255), "email" character varying(255), "password_digest" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140929223638"]]
+  [1m[36m (11.9ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.6ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (22.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (97.8ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20140929223638)
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (1.0ms)[0m  [1mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+PG::UndefinedTable: ERROR:  relation "users" does not exist
+: CREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (18.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (114.7ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20140929223638)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.7ms)[0m  [1mCREATE  INDEX  "index_email_on_unique_and_true" ON "email"  ("[:unique, true]")[0m
+PG::UndefinedTable: ERROR:  relation "email" does not exist
+: CREATE  INDEX  "index_email_on_unique_and_true" ON "email"  ("[:unique, true]")
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (21.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (95.6ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20140929223638)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (161.3ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "name" character varying(255), "email" character varying(255), "password_digest" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (3.3ms)[0m  CREATE  INDEX  "index_email_on_unique_and_true" ON "email"  ("[:unique, true]")
+PG::UndefinedTable: ERROR:  relation "email" does not exist
+: CREATE  INDEX  "index_email_on_unique_and_true" ON "email"  ("[:unique, true]")
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[36m (17.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (94.1ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20140929223638)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (153.0ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "name" character varying(255), "email" character varying(255), "password_digest" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (30.7ms)[0m  CREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140929223638"]]
+  [1m[35m (30.4ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-29 19:41:46 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/railties-4.1.5/lib/rails/templates/rails/welcome/index.html.erb (8.4ms)
+Completed 200 OK in 158ms (Views: 139.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2014-09-29 19:41:54 -0500
+
+ActionController::RoutingError (No route matches [GET] "/users/new"):
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/k6/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/k6/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/k6/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.5ms)
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (26.8ms)
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (302.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-29 21:23:30 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/railties-4.1.5/lib/rails/templates/rails/welcome/index.html.erb (3.7ms)
+Completed 200 OK in 40ms (Views: 30.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:23:35 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 949ms (Views: 948.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-29 21:23:36 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-29 21:23:36 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-29 21:23:36 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-29 21:23:36 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-29 21:23:36 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-29 21:23:36 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-29 21:23:36 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-29 21:23:36 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-29 21:23:36 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-29 21:23:48 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-29 21:23:48 -0500
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:25:41 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 103ms (Views: 101.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-29 21:25:41 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-29 21:25:41 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-29 21:25:41 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-29 21:25:41 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-29 21:25:41 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-29 21:25:41 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-29 21:25:41 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-29 21:25:41 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-29 21:25:41 -0500
+
+
+Started GET "/users/new" for 127.0.0.1 at 2014-09-29 21:26:07 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 45ms (Views: 44.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-29 21:26:07 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-29 21:26:07 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-29 21:26:07 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-29 21:26:07 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-29 21:26:07 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-29 21:26:07 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-29 21:26:07 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-29 21:26:07 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-29 21:26:07 -0500
+
+
+Started GET "/users/new" for 127.0.0.1 at 2014-09-29 21:26:27 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 127ms (Views: 117.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-29 21:26:28 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-29 21:26:28 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-29 21:26:28 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-29 21:26:28 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-29 21:26:28 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-29 21:26:28 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-29 21:26:28 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-29 21:26:28 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-29 21:26:28 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-29 21:27:59 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/railties-4.1.5/lib/rails/templates/rails/welcome/index.html.erb (0.9ms)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2014-09-29 21:28:06 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 42ms (Views: 41.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-29 21:28:06 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-29 21:28:06 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-29 21:28:06 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-29 21:28:06 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-29 21:28:06 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-29 21:28:06 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-29 21:28:06 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-29 21:28:06 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-29 21:28:06 -0500
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-29 21:28:13 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-29 21:28:13 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-29 21:28:13 -0500
+
+
+Started GET "/users/new" for 127.0.0.1 at 2014-09-29 21:35:36 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 50ms (Views: 49.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-29 21:35:37 -0500
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-29 21:35:37 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-29 21:35:37 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-29 21:35:37 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-29 21:35:37 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-29 21:35:37 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-29 21:35:37 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-29 21:35:37 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-29 21:35:37 -0500
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:38:21 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 44ms (Views: 43.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-29 21:38:22 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-29 21:38:22 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-29 21:38:22 -0500
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-29 21:38:22 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-29 21:38:22 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-29 21:38:22 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-29 21:38:22 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-29 21:38:22 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-29 21:38:22 -0500
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:38:35 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 99ms (Views: 97.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-29 21:38:36 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-29 21:38:36 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-29 21:38:36 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-29 21:38:36 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-29 21:38:36 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-29 21:38:36 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-29 21:38:36 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-29 21:38:36 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-29 21:38:36 -0500
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:38:36 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 45ms (Views: 43.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:38:36 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 43ms (Views: 42.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:38:36 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 95ms (Views: 94.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:38:36 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 41ms (Views: 40.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:38:36 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 50ms (Views: 49.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:38:36 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 41ms (Views: 40.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:38:36 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 90ms (Views: 89.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:38:36 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 39ms (Views: 38.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:38:36 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 41ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:38:36 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 39ms (Views: 38.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:38:36 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 88ms (Views: 87.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-29 21:38:37 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-29 21:38:37 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-29 21:38:37 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-29 21:38:37 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-29 21:38:37 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-29 21:38:37 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-29 21:38:37 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-29 21:38:37 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-29 21:38:37 -0500
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:38:44 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 125ms (Views: 115.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-29 21:38:45 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-29 21:38:45 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-29 21:38:45 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-29 21:38:45 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-29 21:38:45 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-29 21:38:45 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-29 21:38:45 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-29 21:38:45 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-29 21:38:45 -0500
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:38:46 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 40ms (Views: 39.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-29 21:38:46 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-29 21:38:46 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-29 21:38:46 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-29 21:38:46 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-29 21:38:46 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-29 21:38:46 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-29 21:38:46 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-29 21:38:46 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-29 21:38:46 -0500
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:38:48 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 90ms (Views: 89.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-29 21:38:48 -0500
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-29 21:38:48 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-29 21:38:48 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-29 21:38:48 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-29 21:38:48 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-29 21:38:48 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-29 21:38:48 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-29 21:38:48 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-29 21:38:48 -0500
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:38:49 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 42ms (Views: 41.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-29 21:38:49 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-29 21:38:49 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-29 21:38:49 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-29 21:38:49 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-29 21:38:49 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-29 21:38:49 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-29 21:38:49 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-29 21:38:49 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-29 21:38:49 -0500
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:38:49 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 47ms (Views: 46.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-29 21:38:50 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-29 21:38:50 -0500
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-29 21:38:50 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-29 21:38:50 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-29 21:38:50 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-29 21:38:50 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-29 21:38:50 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-29 21:38:50 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-29 21:38:50 -0500
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:38:50 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 44ms (Views: 43.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-29 21:38:50 -0500
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-29 21:38:50 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-29 21:38:50 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-29 21:38:50 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-29 21:38:50 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-29 21:38:50 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-29 21:38:50 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-29 21:38:50 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-29 21:38:50 -0500
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:38:56 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 43ms (Views: 41.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-29 21:38:56 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-29 21:38:56 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-29 21:38:56 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-29 21:38:56 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-29 21:38:56 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-29 21:38:56 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-29 21:38:56 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-29 21:38:56 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-29 21:38:56 -0500
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:38:56 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 102ms (Views: 101.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:38:57 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 39ms (Views: 38.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:38:57 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 43ms (Views: 42.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:38:57 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 42ms (Views: 41.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:38:57 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 88ms (Views: 87.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:38:57 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 42ms (Views: 41.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:38:57 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 41ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:38:57 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 41ms (Views: 39.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:38:57 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 39ms (Views: 37.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:38:57 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 89ms (Views: 88.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:38:57 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 44ms (Views: 43.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:38:57 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 92ms (Views: 91.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:38:57 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 43ms (Views: 42.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:38:57 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 95ms (Views: 94.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:38:57 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 47ms (Views: 46.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:38:57 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 42ms (Views: 41.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:38:58 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 39ms (Views: 38.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:38:58 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 93ms (Views: 92.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:38:58 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 41ms (Views: 40.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:38:58 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 44ms (Views: 43.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:38:58 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 39ms (Views: 38.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:38:58 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 93ms (Views: 92.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:38:58 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 41ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:38:58 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 38ms (Views: 37.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:38:58 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 46ms (Views: 44.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:38:58 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 88ms (Views: 87.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:38:58 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 41ms (Views: 40.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:38:58 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 45ms (Views: 43.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:38:58 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 45ms (Views: 44.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:38:58 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 89ms (Views: 88.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:38:58 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 38ms (Views: 37.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:38:58 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 56ms (Views: 54.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:38:59 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 87ms (Views: 86.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:38:59 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 39ms (Views: 38.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-29 21:38:59 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-29 21:38:59 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-29 21:38:59 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-29 21:38:59 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-29 21:38:59 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-29 21:38:59 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-29 21:38:59 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-29 21:38:59 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-29 21:38:59 -0500
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-29 21:39:01 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-29 21:39:01 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-29 21:39:01 -0500
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:39:18 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 40ms (Views: 39.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-29 21:39:18 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-29 21:39:18 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-29 21:39:18 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-29 21:39:18 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-29 21:39:18 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-29 21:39:18 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-29 21:39:18 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-29 21:39:18 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-29 21:39:18 -0500
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:39:50 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 90ms (Views: 89.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-29 21:39:50 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-29 21:39:50 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-29 21:39:50 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-29 21:39:50 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-29 21:39:50 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-29 21:39:50 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-29 21:39:50 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-29 21:39:50 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-29 21:39:50 -0500
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:39:51 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 43ms (Views: 42.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-29 21:39:51 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-29 21:39:51 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-29 21:39:52 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-29 21:39:52 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-29 21:39:52 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-29 21:39:52 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-29 21:39:52 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-29 21:39:52 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-29 21:39:52 -0500
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:39:52 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 42ms (Views: 40.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-29 21:39:52 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-29 21:39:52 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-29 21:39:52 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-29 21:39:52 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-29 21:39:52 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-29 21:39:52 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-29 21:39:52 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-29 21:39:52 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-29 21:39:52 -0500
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:39:53 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 96ms (Views: 94.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-29 21:39:53 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-29 21:39:53 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-29 21:39:53 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-29 21:39:53 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-29 21:39:53 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-29 21:39:53 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-29 21:39:53 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-29 21:39:53 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-29 21:39:53 -0500
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:40:15 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 123ms (Views: 113.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-29 21:40:15 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-29 21:40:15 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-29 21:40:15 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-29 21:40:15 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-29 21:40:15 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-29 21:40:15 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-29 21:40:15 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-29 21:40:15 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-29 21:40:15 -0500
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:40:17 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 41ms (Views: 40.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-29 21:40:18 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-29 21:40:18 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-29 21:40:18 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-29 21:40:18 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-29 21:40:18 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-29 21:40:18 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-29 21:40:18 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-29 21:40:18 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-29 21:40:18 -0500
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:40:19 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 87ms (Views: 85.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-29 21:40:19 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-29 21:40:19 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-29 21:40:19 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-29 21:40:19 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-29 21:40:19 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-29 21:40:19 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-29 21:40:19 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-29 21:40:19 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-29 21:40:19 -0500
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:41:15 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 43ms (Views: 41.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-29 21:41:15 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-29 21:41:15 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-29 21:41:16 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-29 21:41:16 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-29 21:41:16 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-29 21:41:16 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-29 21:41:16 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-29 21:41:16 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-29 21:41:16 -0500
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:41:18 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 46ms (Views: 45.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-29 21:41:18 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-29 21:41:18 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-29 21:41:18 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-29 21:41:18 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-29 21:41:18 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-29 21:41:18 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-29 21:41:18 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-29 21:41:18 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-29 21:41:18 -0500
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:41:30 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 130ms (Views: 120.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-29 21:41:30 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-29 21:41:30 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-29 21:41:30 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-29 21:41:30 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-29 21:41:30 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-29 21:41:30 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-29 21:41:30 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-29 21:41:30 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-29 21:41:30 -0500
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:41:33 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 45ms (Views: 44.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-29 21:41:33 -0500
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-29 21:41:33 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-29 21:41:33 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-29 21:41:33 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-29 21:41:33 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-29 21:41:33 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-29 21:41:33 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-29 21:41:33 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-29 21:41:33 -0500
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:41:34 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 97ms (Views: 96.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-29 21:41:34 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-29 21:41:34 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-29 21:41:34 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-29 21:41:34 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-29 21:41:34 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-29 21:41:34 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-29 21:41:34 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-29 21:41:34 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-29 21:41:34 -0500
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:41:55 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 3ms
+
+SyntaxError (/home/k6/Dropbox/projects/not_funny/app/views/users/new.html.erb:16: syntax error, unexpected '<', expecting ')'
+<%end);@output_buffer.safe_append='
+ ^
+/home/k6/Dropbox/projects/not_funny/app/views/users/new.html.erb:16: unknown type of %string
+<%end);@output_buffer.safe_append='
+    ^):
+  app/views/users/new.html.erb:16: syntax error, unexpected '<', expecting ')'
+  app/views/users/new.html.erb:16: unknown type of %string
+
+
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.3ms)
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (46.7ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:43:06 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 6ms
+
+SyntaxError (/home/k6/Dropbox/projects/not_funny/app/views/users/new.html.erb:16: syntax error, unexpected '<', expecting ')'
+<% end );@output_buffer.safe_append='
+ ^):
+  app/views/users/new.html.erb:16: syntax error, unexpected '<', expecting ')'
+
+
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.6ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:44:13 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 7ms
+
+SyntaxError (/home/k6/Dropbox/projects/not_funny/app/views/users/new.html.erb:16: syntax error, unexpected '<', expecting ')'
+<% end );@output_buffer.safe_append='
+ ^
+/home/k6/Dropbox/projects/not_funny/app/views/users/new.html.erb:18: syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/k6/Dropbox/projects/not_funny/app/views/users/new.html.erb:20: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/users/new.html.erb:16: syntax error, unexpected '<', expecting ')'
+  app/views/users/new.html.erb:18: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/users/new.html.erb:20: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:44:19 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 5ms
+
+SyntaxError (/home/k6/Dropbox/projects/not_funny/app/views/users/new.html.erb:16: syntax error, unexpected '<', expecting ')'
+<% end );@output_buffer.safe_append='
+ ^
+/home/k6/Dropbox/projects/not_funny/app/views/users/new.html.erb:18: syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/k6/Dropbox/projects/not_funny/app/views/users/new.html.erb:20: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/users/new.html.erb:16: syntax error, unexpected '<', expecting ')'
+  app/views/users/new.html.erb:18: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/users/new.html.erb:20: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.8ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:44:20 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 3ms
+
+SyntaxError (/home/k6/Dropbox/projects/not_funny/app/views/users/new.html.erb:16: syntax error, unexpected '<', expecting ')'
+<% end );@output_buffer.safe_append='
+ ^
+/home/k6/Dropbox/projects/not_funny/app/views/users/new.html.erb:18: syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/k6/Dropbox/projects/not_funny/app/views/users/new.html.erb:20: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/users/new.html.erb:16: syntax error, unexpected '<', expecting ')'
+  app/views/users/new.html.erb:18: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/users/new.html.erb:20: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.8ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:44:30 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 17ms
+
+SyntaxError (/home/k6/Dropbox/projects/not_funny/app/views/users/new.html.erb:16: syntax error, unexpected '<', expecting ')'
+<% end );@output_buffer.safe_append='
+ ^
+/home/k6/Dropbox/projects/not_funny/app/views/users/new.html.erb:18: syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/k6/Dropbox/projects/not_funny/app/views/users/new.html.erb:20: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/users/new.html.erb:16: syntax error, unexpected '<', expecting ')'
+  app/views/users/new.html.erb:18: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/users/new.html.erb:20: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.2ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:44:33 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 4ms
+
+SyntaxError (/home/k6/Dropbox/projects/not_funny/app/views/users/new.html.erb:16: syntax error, unexpected '<', expecting ')'
+<% end );@output_buffer.safe_append='
+ ^
+/home/k6/Dropbox/projects/not_funny/app/views/users/new.html.erb:18: syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/k6/Dropbox/projects/not_funny/app/views/users/new.html.erb:20: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/users/new.html.erb:16: syntax error, unexpected '<', expecting ')'
+  app/views/users/new.html.erb:18: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/users/new.html.erb:20: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.2ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:45:20 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 5ms
+
+SyntaxError (/home/k6/Dropbox/projects/not_funny/app/views/users/new.html.erb:17: syntax error, unexpected '<', expecting ')'
+<% end );@output_buffer.safe_append='
+ ^
+/home/k6/Dropbox/projects/not_funny/app/views/users/new.html.erb:19: syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/k6/Dropbox/projects/not_funny/app/views/users/new.html.erb:21: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/users/new.html.erb:17: syntax error, unexpected '<', expecting ')'
+  app/views/users/new.html.erb:19: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/users/new.html.erb:21: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.7ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:45:21 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 52ms
+
+SyntaxError (/home/k6/Dropbox/projects/not_funny/app/views/users/new.html.erb:17: syntax error, unexpected '<', expecting ')'
+<% end );@output_buffer.safe_append='
+ ^
+/home/k6/Dropbox/projects/not_funny/app/views/users/new.html.erb:19: syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/k6/Dropbox/projects/not_funny/app/views/users/new.html.erb:21: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/users/new.html.erb:17: syntax error, unexpected '<', expecting ')'
+  app/views/users/new.html.erb:19: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/users/new.html.erb:21: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.1ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:46:07 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h1>Sign up</h1>
+    2: <%= form_for(@user) do |f| %>
+    3:   <%= f.label :name %>
+    4:  <%= f.text_field :name %>
+    5:   
+  app/views/users/new.html.erb:2:in `_app_views_users_new_html_erb__3826540445117282443_44773000'
+
+
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (16.5ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:47:57 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (362.3ms)
+Completed 500 Internal Server Error in 381ms
+
+ActionView::Template::Error (undefined method `merge' for "Confirmation":String):
+    10:  <%= f.text_field :password %>
+    11: 
+    12:  <%= f.label :password_confirmation %>
+    13:  <%= f.text_field :password_confirmation, "Confirmation" %>
+    14: 
+    15:  <%= f.submit "Create my account" %>
+    16:  
+  app/views/users/new.html.erb:13:in `block in _app_views_users_new_html_erb__3826540445117282443_44773000'
+  app/views/users/new.html.erb:2:in `_app_views_users_new_html_erb__3826540445117282443_44773000'
+
+
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.5ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:50:39 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (5.8ms)
+Completed 500 Internal Server Error in 13ms
+
+ActionView::Template::Error (undefined method `merge' for "Confirmation":String):
+    10:  <%= f.text_field :password %>
+    11: 
+    12:  <%= f.label :password_confirmation %>
+    13:  <%= f.text_field :password_confirmation, "Confirmation" %>
+    14: 
+    15:  <%= f.submit "Create my account" %>
+    16:  
+  app/views/users/new.html.erb:13:in `block in _app_views_users_new_html_erb__3826540445117282443_44773000'
+  app/views/users/new.html.erb:2:in `_app_views_users_new_html_erb__3826540445117282443_44773000'
+
+
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.9ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:50:42 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (undefined method `merge' for "Confirmation":String):
+    10:  <%= f.text_field :password %>
+    11: 
+    12:  <%= f.label :password_confirmation %>
+    13:  <%= f.text_field :password_confirmation, "Confirmation" %>
+    14: 
+    15:  <%= f.submit "Create my account" %>
+    16:  
+  app/views/users/new.html.erb:13:in `block in _app_views_users_new_html_erb__3826540445117282443_44773000'
+  app/views/users/new.html.erb:2:in `_app_views_users_new_html_erb__3826540445117282443_44773000'
+
+
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.4ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:50:43 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.6ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (undefined method `merge' for "Confirmation":String):
+    10:  <%= f.text_field :password %>
+    11: 
+    12:  <%= f.label :password_confirmation %>
+    13:  <%= f.text_field :password_confirmation, "Confirmation" %>
+    14: 
+    15:  <%= f.submit "Create my account" %>
+    16:  
+  app/views/users/new.html.erb:13:in `block in _app_views_users_new_html_erb__3826540445117282443_44773000'
+  app/views/users/new.html.erb:2:in `_app_views_users_new_html_erb__3826540445117282443_44773000'
+
+
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.4ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:50:45 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (undefined method `merge' for "Confirmation":String):
+    10:  <%= f.text_field :password %>
+    11: 
+    12:  <%= f.label :password_confirmation %>
+    13:  <%= f.text_field :password_confirmation, "Confirmation" %>
+    14: 
+    15:  <%= f.submit "Create my account" %>
+    16:  
+  app/views/users/new.html.erb:13:in `block in _app_views_users_new_html_erb__3826540445117282443_44773000'
+  app/views/users/new.html.erb:2:in `_app_views_users_new_html_erb__3826540445117282443_44773000'
+
+
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.5ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:50:45 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (undefined method `merge' for "Confirmation":String):
+    10:  <%= f.text_field :password %>
+    11: 
+    12:  <%= f.label :password_confirmation %>
+    13:  <%= f.text_field :password_confirmation, "Confirmation" %>
+    14: 
+    15:  <%= f.submit "Create my account" %>
+    16:  
+  app/views/users/new.html.erb:13:in `block in _app_views_users_new_html_erb__3826540445117282443_44773000'
+  app/views/users/new.html.erb:2:in `_app_views_users_new_html_erb__3826540445117282443_44773000'
+
+
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.5ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:50:46 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (undefined method `merge' for "Confirmation":String):
+    10:  <%= f.text_field :password %>
+    11: 
+    12:  <%= f.label :password_confirmation %>
+    13:  <%= f.text_field :password_confirmation, "Confirmation" %>
+    14: 
+    15:  <%= f.submit "Create my account" %>
+    16:  
+  app/views/users/new.html.erb:13:in `block in _app_views_users_new_html_erb__3826540445117282443_44773000'
+  app/views/users/new.html.erb:2:in `_app_views_users_new_html_erb__3826540445117282443_44773000'
+
+
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.6ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:50:50 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (undefined method `merge' for "Confirmation":String):
+    10:  <%= f.text_field :password %>
+    11: 
+    12:  <%= f.label :password_confirmation %>
+    13:  <%= f.text_field :password_confirmation, "Confirmation" %>
+    14: 
+    15:  <%= f.submit "Create my account" %>
+    16:  
+  app/views/users/new.html.erb:13:in `block in _app_views_users_new_html_erb__3826540445117282443_44773000'
+  app/views/users/new.html.erb:2:in `_app_views_users_new_html_erb__3826540445117282443_44773000'
+
+
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.9ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:51:44 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (367.4ms)
+Completed 500 Internal Server Error in 397ms
+
+ActionView::Template::Error (undefined method `merge' for "Confirmation":String):
+    10:  <%= f.text_field :password %>
+    11: 
+    12:  <%= f.label :password_confirmation %>
+    13:  <%= f.text_field :password_confirmation, "Confirmation" %>
+    14: 
+    15:  <%= f.submit "Create my account" %>
+    16:  
+  app/views/users/new.html.erb:13:in `block in _app_views_users_new_html_erb___1920832052175729456_32022000'
+  app/views/users/new.html.erb:2:in `_app_views_users_new_html_erb___1920832052175729456_32022000'
+
+
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.8ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:53:49 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 131ms (Views: 129.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-29 21:53:49 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-29 21:53:49 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-29 21:53:49 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-29 21:53:49 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-29 21:53:49 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-29 21:53:49 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-29 21:53:49 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-29 21:53:49 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-29 21:53:49 -0500
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:54:33 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 53ms (Views: 51.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-29 21:54:33 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-29 21:54:33 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-29 21:54:33 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-29 21:54:33 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-29 21:54:33 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-29 21:54:33 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-29 21:54:33 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-29 21:54:33 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-29 21:54:33 -0500
+
+
+Started GET "/signup" for 127.0.0.1 at 2014-09-29 21:55:08 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 48ms (Views: 46.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-29 21:55:08 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-29 21:55:08 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-29 21:55:08 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-29 21:55:08 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-29 21:55:08 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-29 21:55:08 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-29 21:55:08 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-29 21:55:08 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-29 21:55:08 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-29 22:05:48 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (429.8ms)
+Completed 200 OK in 571ms (Views: 546.0ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-29 22:05:49 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-29 22:05:49 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-29 22:05:49 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-29 22:05:49 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-29 22:05:49 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-29 22:05:49 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-29 22:05:49 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-29 22:05:49 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-29 22:05:49 -0500
+
+
+Started POST "/users" for 127.0.0.1 at 2014-09-29 22:06:02 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DSYLQb3IREiek+VPEDZe8W6giH9yPn/WYzHI5f4pPCI=", "user"=>{"name"=>"Marek Pyczkowski", "email"=>"a@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'a@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (11.0ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-09-30 03:06:02.519557"], ["email", "a@gmail.com"], ["name", "Marek Pyczkowski"], ["password_digest", "$2a$10$JulesBYr9L21Ji6SpPFU7OnSGyLFFETWyS3ERpQ7Mfc4lWKm.oM6O"], ["updated_at", "2014-09-30 03:06:02.519557"]]
+  [1m[36m (58.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 190ms (ActiveRecord: 70.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-29 22:06:02 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 45ms (Views: 43.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-29 22:06:02 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-29 22:06:02 -0500
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-29 22:06:02 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-29 22:06:02 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-29 22:06:02 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-29 22:06:02 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-29 22:06:02 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-29 22:06:02 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-29 22:06:02 -0500
+
+
+Started GET "/signin" for 127.0.0.1 at 2014-09-30 12:11:50 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (124.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 1400ms (Views: 1390.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-09-30 12:11:53 -0500
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-30 12:11:53 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-30 12:11:53 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-30 12:11:53 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-30 12:11:53 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-09-30 12:11:53 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-30 12:11:53 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-30 12:11:53 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-30 12:11:53 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-30 12:11:53 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-30 12:11:53 -0500
+
+
+Started GET "/signin" for 127.0.0.1 at 2014-09-30 12:12:08 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 48ms (Views: 46.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-09-30 12:12:08 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-30 12:12:08 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-30 12:12:08 -0500
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-30 12:12:08 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-30 12:12:08 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-30 12:12:08 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-30 12:12:08 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-09-30 12:12:08 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-30 12:12:08 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-30 12:12:08 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-30 12:12:08 -0500
+
+
+Started GET "/signin" for 127.0.0.1 at 2014-09-30 12:12:53 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 52ms (Views: 51.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-09-30 12:12:53 -0500
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-30 12:12:53 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-30 12:12:53 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-30 12:12:53 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-30 12:12:53 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-30 12:12:53 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-30 12:12:53 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-09-30 12:12:53 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-30 12:12:53 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-30 12:12:53 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-30 12:12:53 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-30 14:28:28 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (368.4ms)
+Completed 200 OK in 786ms (Views: 418.3ms | ActiveRecord: 349.4ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-09-30 14:28:29 -0500
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-30 14:28:29 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-30 14:28:29 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-30 14:28:29 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-30 14:28:29 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-30 14:28:29 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-30 14:28:29 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-09-30 14:28:29 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-30 14:28:29 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-30 14:28:29 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-30 14:28:29 -0500
+
+
+Started GET "/signin" for 127.0.0.1 at 2014-09-30 14:28:33 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 105ms (Views: 103.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-09-30 14:28:33 -0500
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-30 14:28:33 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-30 14:28:33 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-30 14:28:33 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-30 14:28:33 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-30 14:28:33 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-30 14:28:33 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-09-30 14:28:33 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-30 14:28:33 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-30 14:28:33 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-30 14:28:33 -0500
+
+
+Started GET "/signin" for 127.0.0.1 at 2014-09-30 14:49:43 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (14.1ms)
+Completed 500 Internal Server Error in 50ms
+
+ActionView::Template::Error (undefined local variable or method `sessions_path' for #<#<Class:0x0000000357fa28>:0x0000000357e0b0>):
+    1: <h1>Sign in</h1>
+    2: 
+    3: <% form_for(:session, url: sessions_path) do |f| %>
+    4:   <%= f.label :email %>
+    5: <%= f.text_field :email %>
+    6: <%= f.label :password %>
+  app/views/sessions/new.html.erb:3:in `_app_views_sessions_new_html_erb___2936619837579970963_28410160'
+
+
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (33.1ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2014-09-30 14:54:33 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (406.0ms)
+Completed 200 OK in 548ms (Views: 537.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-30 14:54:34 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-30 14:54:34 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-30 14:54:34 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-30 14:54:34 -0500
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-09-30 14:54:34 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-30 14:54:34 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-30 14:54:34 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-09-30 14:54:34 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-30 14:54:34 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-30 14:54:34 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-30 14:54:34 -0500
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-30 14:54:43 -0500
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-09-30 14:54:43 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-30 14:54:43 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-30 14:54:43 -0500
+
+
+Started GET "/signin" for 127.0.0.1 at 2014-09-30 14:55:43 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 54ms (Views: 52.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-30 14:55:43 -0500
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-09-30 14:55:43 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-30 14:55:43 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-30 14:55:43 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-30 14:55:43 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-30 14:55:43 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-30 14:55:43 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-09-30 14:55:43 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-30 14:55:43 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-30 14:55:43 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-30 14:55:43 -0500
+
+
+Started GET "/signin" for 127.0.0.1 at 2014-09-30 14:56:00 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 57ms (Views: 56.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-09-30 14:56:00 -0500
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-30 14:56:00 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-30 14:56:00 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-30 14:56:00 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-30 14:56:00 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-30 14:56:00 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-30 14:56:00 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-09-30 14:56:00 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-30 14:56:00 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-30 14:56:00 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-30 14:56:00 -0500
+
+
+Started POST "/sessions" for 127.0.0.1 at 2014-09-30 14:56:01 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5/2q7Z5w3Jal7PgVXi1/v1aDC7qYFc/fK+CSofcx31U=", "session"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+Completed 500 Internal Server Error in 4ms
+
+ActionView::MissingTemplate (Missing template sessions/create, application/create with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * "/home/k6/Dropbox/projects/not_funny/app/views"
+):
+  actionview (4.1.5) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.1.5) lib/action_view/lookup_context.rb:124:in `find'
+  actionview (4.1.5) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.1.5) lib/action_view/renderer/template_renderer.rb:41:in `determine_template'
+  actionview (4.1.5) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.1.5) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.1.5) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.1.5) lib/action_view/rendering.rb:99:in `_render_template'
+  actionpack (4.1.5) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.1.5) lib/action_view/rendering.rb:82:in `render_to_body'
+  actionpack (4.1.5) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.1.5) lib/action_controller/metal/renderers.rb:32:in `render_to_body'
+  actionpack (4.1.5) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.1.5) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.1.5) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.1.5) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/k6/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (4.1.5) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.1.5) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.1.5) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.1.5) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.1.5) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.1.5) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.1.5) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.1.5) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.5) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.5) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:229:in `call'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:86:in `call'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.5) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.5) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.5) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.5) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.5) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.5) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.5) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.5) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.5) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.5) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.5) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.5) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.5) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.5) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.5) lib/action_dispatch/routing/route_set.rb:82:in `call'
+  actionpack (4.1.5) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.5) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.5) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.5) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.5) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.5) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:35:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.5) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.5) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.5) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.5) lib/rails/engine.rb:514:in `call'
+  railties (4.1.5) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/k6/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/k6/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/k6/.rvm/rubies/ruby-2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (0.8ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2014-09-30 15:02:12 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 53ms (Views: 51.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-09-30 15:02:12 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-30 15:02:12 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-30 15:02:12 -0500
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-30 15:02:12 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-30 15:02:12 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-30 15:02:12 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-30 15:02:12 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-09-30 15:02:12 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-30 15:02:12 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-30 15:02:12 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-30 15:02:12 -0500
+
+
+Started POST "/sessions" for 127.0.0.1 at 2014-09-30 15:02:14 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5/2q7Z5w3Jal7PgVXi1/v1aDC7qYFc/fK+CSofcx31U=", "session"=>{"email"=>"xfcvxcvcx", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+Completed 500 Internal Server Error in 10ms
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/sessions_controller.rb:6:in `create'
+
+
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/k6/.rvm/gems/ruby-2.0.0-p481/gems/actionpack-4.1.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (120.5ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2014-09-30 15:02:33 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 52ms (Views: 50.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-30 15:02:33 -0500
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-09-30 15:02:33 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-30 15:02:33 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-30 15:02:33 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-30 15:02:33 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-30 15:02:33 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-30 15:02:33 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-09-30 15:02:33 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-30 15:02:33 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-30 15:02:33 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-30 15:02:33 -0500
+
+
+Started POST "/sessions" for 127.0.0.1 at 2014-09-30 15:02:36 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5/2q7Z5w3Jal7PgVXi1/v1aDC7qYFc/fK+CSofcx31U=", "session"=>{"email"=>"dfsf", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (250.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'dfsf' LIMIT 1
+  Rendered sessions/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 549ms (Views: 106.9ms | ActiveRecord: 253.3ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-09-30 15:02:36 -0500
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-30 15:02:36 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-30 15:02:36 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-30 15:02:36 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-30 15:02:36 -0500
+
+
+Started GET "/assets/user.css?body=1" for 127.0.0.1 at 2014-09-30 15:02:36 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-30 15:02:36 -0500
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-09-30 15:02:36 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-30 15:02:36 -0500
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-30 15:02:36 -0500
+
+
+Started GET "/assets/user.js?body=1" for 127.0.0.1 at 2014-09-30 15:02:36 -0500
