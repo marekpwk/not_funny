@@ -1,5 +1,9 @@
-require 'rails_helper'
+require 'spec_helper'
 
-RSpec.describe UsersController, :type => :controller do
+describe UsersController, :type => :controller do
 
+  describe "signin" do
+   before { visit signup_path }
+    # response.should be_success
+  end
 end
