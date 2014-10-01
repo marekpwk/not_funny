@@ -16,7 +16,7 @@
 <nav class="top-bar" data-topbar role="navigation">
   <ul class="title-area">
     <li class="name">
-    <h1><a href="#">Not funny</a></h1>
+    <h1> <%= link_to "Not funny", root_path %> </h1>
     </li>
     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
   </ul>
@@ -29,7 +29,7 @@
       <li><a href="#">Random</a></li>
       <li><a href="#">Memes</a></li>
       <li><a href="#">Add meme</a></li>
-      <li><a href="#">Sign in</a></li>
+      <li><%= link_to "Sign in", signin_path %><li>
 
     </ul>
 
