@@ -5,10 +5,18 @@ class UsersController < ApplicationController
   
   def create
     @user = User.new(user_params)
-    @user.save
+   if  @user.save
+    flash[:success] = "Welcome to Not Funny"
     redirect_to "/"
+   else
+     render 'new'
+   end
   end
 
+  def show
+    @user = User.find_by(id: params[:id])
+  end
+  
   private
   def user_params
     params.require(:user).permit(:name, :email, :password,

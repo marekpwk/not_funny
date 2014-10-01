@@ -1192,3 +1192,119 @@ Processing by SessionsController#create as HTML
   Parameters: {"utf8"=>"✓", "session"=>{"email"=>"YOGI@EXAMPLE.COM", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
 Completed 500 Internal Server Error in 3ms
   [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (53.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (107.6ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'yogi@example.com' LIMIT 1
+  [1m[36mSQL (32.1ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-10-01 16:33:01.453356"], ["email", "yogi@example.com"], ["name", "Yogi"], ["password_digest", "$2a$04$dRb/g8E6u.sS8NZFj73sC.Tz7v9Sx5GNBCAQ5JFXCz6MaRUwRIyNW"], ["updated_at", "2014-10-01 16:33:01.453356"]]
+  [1m[35m (0.5ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/users/18" for 127.0.0.1 at 2014-10-01 11:33:01 -0500
+  [1m[36m (0.8ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'yogi@example.com' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-10-01 16:33:01.690190"], ["email", "yogi@example.com"], ["name", "Yogi"], ["password_digest", "$2a$04$ZwmytLHm/CO5QtsmKv5IzOetJTncIepfP7oP4h83dS1Q1OUgB4Aci"], ["updated_at", "2014-10-01 16:33:01.690190"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/users/19" for 127.0.0.1 at 2014-10-01 11:33:01 -0500
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Started GET "/signup" for 127.0.0.1 at 2014-10-01 11:33:01 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (374.7ms)
+Completed 200 OK in 14253ms (Views: 14243.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+Started GET "/signup" for 127.0.0.1 at 2014-10-01 11:33:15 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (1.3ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'yogi@example.com' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-10-01 16:37:09.430960"], ["email", "yogi@example.com"], ["name", "Yogi"], ["password_digest", "$2a$04$z2rRuid27s.xEW8kCtWRD.RNcE7kD6UdZ7S/q03eO4G9eQdcMYSYy"], ["updated_at", "2014-10-01 16:37:09.430960"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/users/20" for 127.0.0.1 at 2014-10-01 11:37:09 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"20"}
+  Rendered users/show.html.erb within layouts/application (3.8ms)
+Completed 500 Internal Server Error in 71ms
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+Started GET "/signup" for 127.0.0.1 at 2014-10-01 11:37:09 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (380.5ms)
+Completed 200 OK in 475ms (Views: 474.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.7ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (1.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'yogi@example.com' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-10-01 16:39:31.324795"], ["email", "yogi@example.com"], ["name", "Yogi"], ["password_digest", "$2a$04$AVVzuFf92AGzfI4/syBOiuKm24B3OwZlZVv1eSCOfPVt29Bm6HSKu"], ["updated_at", "2014-10-01 16:39:31.324795"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/users/21" for 127.0.0.1 at 2014-10-01 11:39:31 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 21 LIMIT 1[0m
+  Rendered users/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 162ms (Views: 97.2ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.6ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+Started GET "/signup" for 127.0.0.1 at 2014-10-01 11:39:31 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (386.9ms)
+Completed 200 OK in 391ms (Views: 389.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (2.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'yogi@example.com' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-10-01 16:41:59.484637"], ["email", "yogi@example.com"], ["name", "Yogi"], ["password_digest", "$2a$04$Pio0kNqCzOXupXlDapQVzeibt0CoQ9/24BxJHLZURPMp14khK7QOy"], ["updated_at", "2014-10-01 16:41:59.484637"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/users/22" for 127.0.0.1 at 2014-10-01 11:41:59 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 22 LIMIT 1[0m
+  Rendered users/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 160ms (Views: 98.3ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+Started GET "/signup" for 127.0.0.1 at 2014-10-01 11:41:59 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (377.9ms)
+Completed 200 OK in 382ms (Views: 381.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+Started GET "/signup" for 127.0.0.1 at 2014-10-01 11:42:12 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (435.1ms)
+Completed 200 OK in 555ms (Views: 534.3ms | ActiveRecord: 2.3ms)
+  [1m[36m (0.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (2.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'yogi@example.com' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-10-01 16:42:13.266423"], ["email", "yogi@example.com"], ["name", "Yogi"], ["password_digest", "$2a$04$YG8Zc.dfwOU5YUwDzn6l6eANNnjcOWCmfctLHV7Lh0sEZgW.HvENi"], ["updated_at", "2014-10-01 16:42:13.266423"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/users/23" for 127.0.0.1 at 2014-10-01 11:42:13 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 23 LIMIT 1[0m
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 10ms (Views: 3.8ms | ActiveRecord: 1.0ms)
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (1.3ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'yogi@example.com' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "password_digest", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-10-01 16:43:59.194900"], ["email", "yogi@example.com"], ["name", "Yogi"], ["password_digest", "$2a$04$ADu66ZBWV9G76fnOVWwjO.aer725K556f3RYwZfNn8ab8Qqf5ET6a"], ["updated_at", "2014-10-01 16:43:59.194900"]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/users/24" for 127.0.0.1 at 2014-10-01 11:43:59 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 24 LIMIT 1[0m
+  Rendered users/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 164ms (Views: 99.0ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
