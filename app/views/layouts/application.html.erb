@@ -12,6 +12,7 @@
 </head>
 
 <body>
+
 <nav class="top-bar" data-topbar role="navigation">
   <ul class="title-area">
     <li class="name">
@@ -29,12 +30,18 @@
       <li><a href="#">Memes</a></li>
       <li><a href="#">Add meme</a></li>
       <li><a href="#">Sign in</a></li>
-      
+
     </ul>
 
   </section>
 </nav>
-<%= yield %>
+<div class="container">
+  <% flash.each do |key, value| %>
+    <div ><%= value %></div>
+<% end %>
+  <%= yield %>
+  <%= debug(params) if Rails.env.development? %>
+</div>
 <%= javascript_include_tag "application" %>
 </body>
 </html>
