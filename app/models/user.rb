@@ -1,10 +1,11 @@
 class User < ActiveRecord::Base
+  before_create :create_remember_token
+  before_save { email.downcase! }
+
   has_secure_password
   validates :name, presence: true
   validates :email, presence: true, uniqueness: true,
     format: { with: /\A[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+\z/ }
-  before_create :create_remember_token
-  before_save { email.downcase! }
 
   private
   def self.new_remember_token
