@@ -22,9 +22,33 @@ describe "Authentication" do
 
       describe "after visiting another page" do
         before { click_link "Not funny" }
-        # it { should_not have_selector('div.alert-box.alert') }
         it "should not have error message" do
           expect(page).to_not have_selector('div.alert-box.alert')
+        end
+      end
+    end
+
+    describe "with valid information" do
+      let(:user) { FactoryGirl.create(:user) }
+      before do
+        fill_in "Email",    with: user.email.upcase
+        fill_in "Password", with: user.password
+        click_button "Sign in"
+      end
+
+      it "has links visible to loggedin users" do
+        expect(page).to have_link('Profile')
+        expect(page).to have_link('Sign out')
+      end
+
+      it "doesnt have sigin link" do
+        expect(page).to_not have_link('Sign in')
+      end
+
+      describe "followed by signout" do
+        before { click_link "Sign out" }
+        it "has sign in link" do
+          expect(page).to have_link('Sign in')
         end
       end
     end
