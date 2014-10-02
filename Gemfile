@@ -28,6 +28,8 @@ gem 'bcrypt-ruby'
 gem 'spring',        group: :development
 group :development, :test do
   gem 'rspec-rails', '~> 2.0'
+  gem 'pry'
+  gem 'pry-nav'
 end
 
 group :test do
