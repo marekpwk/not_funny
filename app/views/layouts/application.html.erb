@@ -29,8 +29,12 @@
       <li><a href="#">Random</a></li>
       <li><a href="#">Memes</a></li>
       <li><a href="#">Add meme</a></li>
+      <% if signed_in? %>
+        <li> <%= link_to "Profile", current_user %></li>
+        <li><%= link_to "Signout", signout_path, method: "delete" %></li>
+      <% else %>  
       <li><%= link_to "Sign in", signin_path %><li>
-
+      <% end %>
     </ul>
 
   </section>

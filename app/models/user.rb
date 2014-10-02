@@ -16,7 +16,7 @@ class User < ActiveRecord::Base
   end
 
   def create_remember_token
-    self.remember_token = self.digest(self.new_remember_token)
+    self.remember_token = User.digest(User.new_remember_token)
   end
 
 end
