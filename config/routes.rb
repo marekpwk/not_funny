@@ -1,18 +1,12 @@
 Rails.application.routes.draw do
-  get 'demots/index'
 
-  get 'demots/new'
-
-  get 'demots/create'
-
-  get 'demots/destroy'
-
-  root to: "users#new"
+  root to: "demots#index"
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   match '/signup', to: 'users#new', via: 'get'
   match '/signin', to: 'sessions#new', via: 'get'
   match '/signout', to: 'sessions#destroy', via: 'delete'
+  resources :demots, only: [:index, :new, :create, :destroy]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
