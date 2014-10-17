@@ -9,7 +9,7 @@ class DemotsController < ApplicationController
 
   def create
     @demot = Demot.new(demot_params)
-    if @picture.save
+    if @demot.save
       redirect_to demots_path, notice: "Your demot has been created"
     else
       render 'new'
