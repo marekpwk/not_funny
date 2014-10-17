@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'demots/index'
+
+  get 'demots/new'
+
+  get 'demots/create'
+
+  get 'demots/destroy'
+
   root to: "users#new"
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
