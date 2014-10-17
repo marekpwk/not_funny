@@ -1,2 +1,9 @@
 <h1>Demots#new</h1>
 <p>Find me in app/views/demots/new.html.erb</p>
+<%= form_for @demot, html: { multipart: true } do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :image %>
+  <%= f.file_field :image %>
+  <%= f.submit "Upload", class: "button radius" %>
+<% end %>
