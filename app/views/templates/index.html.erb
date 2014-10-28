@@ -1,0 +1,12 @@
+<h1>Templates#index</h1>
+<p>Find me in app/views/templates/index.html.erb</p>
+<div class="row">
+<% @templates.each do |template| %>
+  <div class="large-10 columns">
+    <h3> <%= template.title %></h3>
+  <%= image_tag(template.image) %>
+<%= image_tag template.image_url(:thumb) if template.image? %>
+</div>
+
+<% end %>
+</div>
