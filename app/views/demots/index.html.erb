@@ -2,9 +2,9 @@
 <p>Find me in app/views/demots/index.html.erb</p>
 <div class="row">
 <% @demots.each do |demot| %>
-  <div class="large-10 columns">
+  <div class="large-8 large-centered columns demots-column">
     <h3> <%= demot.title %></h3>
-  <%= image_tag(demot.image) %>
+    <%= image_tag(demot.image) %>
 </div>
 
 <% end %>
