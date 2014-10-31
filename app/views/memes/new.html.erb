@@ -1,8 +1,11 @@
 <%= image_tag(@template.image,:id => 'canvas_image', :style => "display: none" ) %>
 <h3>Creat your meme</h>
-
-<textarea type="text" name="inputQuery" id="upperText" placeholder="Upper Text" cols="20" rows="5" /></textarea>
-<textarea type="text" name="inputQuery" id="bottomText" placeholder="Bottom Text" cols="20" rows="5" /></textarea>
+<textarea type="text" name="upperText" id="upperText" placeholder="Upper Text" cols="20" rows="5" /></textarea>
+<textarea type="text" name="upperText" id="bottomText" placeholder="Bottom Text" cols="20" rows="5" /></textarea>
 <canvas id="canvas" width="600" height="600">
 
 </canvas>
+<%= form_for @meme, html: { multipart: true } do |f| %>
+  <%= f.hidden_field :image, :value => "" %>
+  <%= f.submit "Upload", class: "button radius" %>
+<% end %>

@@ -5,10 +5,26 @@ class MemesController < ApplicationController
 
   def new
     @template = Template.find(params[:template_id])
-    @demot = Demot.new
+    @meme = Meme.new
   end
 
-  def demot_params
-    params.require(:demot).permit(:image)
+  def create
+    @meme = Meme.new(meme_params)
+    @meme.image_data=(params[:meme][:image].split("base64,")[1])
+    if @meme.save
+      redirect_to demots_path, notice: "Your meme has been created"
+    else
+      render 'new'
+    end
+  end
+
+  def destroy
+    @meme = Meme.find(params[:id])
+    @meme.destroy
+    redirect_to memes_path, notice: "Meme has been deleted"
+  end
+
+  def meme_params
+    params.require(:meme).permit(:image)
   end
 end
