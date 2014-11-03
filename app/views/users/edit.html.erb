@@ -1,6 +1,7 @@
 <h2>Update your profile</h2>
 
 <%= form_for(@user) do |f| %>
+  <%= render 'shared/error_messages'%>
   <%= f.label :name %>
  <%= f.text_field :name %>
   
@@ -10,7 +11,7 @@
  <%= f.label :password %>
  <%= f.text_field :password %>
 
- <%= f.label :password_confirmation, "Confirmation" %>
+ <%= f.label :password_confirmation, "Password confirmation" %>
  <%= f.text_field :password_confirmation %>
 
  <%= f.submit "Save changes" %>

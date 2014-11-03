@@ -10,7 +10,7 @@ describe "User pages" do
   describe "signup page" do
     before { visit signup_path }
 
-   it { should have_content('Sign up') }
+   it { expect(page).to have_selector('h1', text: 'Sign up') }
   end
 
   describe "edit page" do
@@ -20,5 +20,20 @@ describe "User pages" do
     describe "page" do
       it { expect(page).to have_selector('h2', text: "Update your profile") }
     end 
+    
+    describe "with valid information" do
+      let(:new_name) {"Yogi"}
+      let(:new_email) {"yogi@example.com"}
+      before do
+        fill_in "Name", with: new_name
+        fill_in "Email", with: new_email
+        fill_in "Password", with: user.password
+        fill_in "Password confirmation", with: user.password
+        click_button "Save changes"
+      end
+      it { expect(page).to have_selector("div.alert-box.success") }
+      specify { user.reload.name.should == new_name }
+      specify { user.reload.email.should == new_email }
+    end
   end
 end
