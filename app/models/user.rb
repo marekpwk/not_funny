@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
   validates :name, presence: true
   validates :email, presence: true, uniqueness: true,
     format: { with: /\A[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+\z/ }
-
+  validate :password, length: {minimum: 6}
   private
   def self.new_remember_token
     SecureRandom.urlsafe_base64
@@ -19,5 +19,4 @@ class User < ActiveRecord::Base
   def create_remember_token
     self.remember_token = User.digest(User.new_remember_token)
   end
-
 end
