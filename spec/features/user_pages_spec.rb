@@ -10,17 +10,20 @@ describe "User pages" do
   describe "signup page" do
     before { visit signup_path }
 
-   it { expect(page).to have_selector('h1', text: 'Sign up') }
+    it { expect(page).to have_selector('h1', text: 'Sign up') }
   end
 
-  describe "edit page" do
+  describe "edit page", type: :request do
     let(:user) { FactoryGirl.create(:user) }
-    before { visit edit_user_path(user) }
+    before  do
+      sign_in user
+      visit edit_user_path(user)
+    end
 
     describe "page" do
       it { expect(page).to have_selector('h2', text: "Update your profile") }
-    end 
-    
+    end
+
     describe "with valid information" do
       let(:new_name) {"Yogi"}
       let(:new_email) {"yogi@example.com"}
@@ -31,6 +34,7 @@ describe "User pages" do
         fill_in "Password confirmation", with: user.password
         click_button "Save changes"
       end
+
       it { expect(page).to have_selector("div.alert-box.success") }
       specify { user.reload.name.should == new_name }
       specify { user.reload.email.should == new_email }
