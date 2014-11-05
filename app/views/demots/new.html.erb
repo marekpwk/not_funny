@@ -1,9 +1,16 @@
-<h1>Demots#new</h1>
-<p>Find me in app/views/demots/new.html.erb</p>
-<%= form_for @demot, html: { multipart: true } do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <%= f.label :image %>
-  <%= f.file_field :image %>
-  <%= f.submit "Upload", class: "button radius" %>
-<% end %>
+<div class="row">
+  <div class="small-6 columns">
+    <%= form_for @demot, html: { multipart: true } do |f| %>
+    <%= f.hidden_field :user_id, :value => current_user.id %>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+    <%= f.submit "Upload", class: "button radius small" %>
+  <% end %>
+  </div>
+  <div class="small-4 columns">
+    <h2>Or create your own</h2>
+    <%= link_to "Create your own meme", memes_path, :class=> "button small radius" %>
+  </div>
+</div>
