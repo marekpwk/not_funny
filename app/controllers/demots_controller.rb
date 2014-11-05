@@ -1,4 +1,5 @@
 class DemotsController < ApplicationController
+  before_filter :signed_in_user, only: [:new, :create]
   def index
     @demots = Demot.all
   end
@@ -12,6 +13,7 @@ class DemotsController < ApplicationController
     if @demot.save
       redirect_to demots_path, notice: "Your demot has been created"
     else
+      flash.now[:alert] = "Ooops, all fields are required"
       render 'new'
     end
   end
@@ -24,6 +26,6 @@ class DemotsController < ApplicationController
 
   private
   def demot_params
-    params.require(:demot).permit(:title, :image)
+    params.require(:demot).permit(:title, :image, :user_id)
   end
 end
