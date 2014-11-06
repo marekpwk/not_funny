@@ -21,7 +21,7 @@ CarrierWave.configure do |config|
         end
       end
     end
-  else
+  elsif Rails.env.development?
     config.fog_credentials = {
       :provider => 'AWS',
       :aws_access_key_id => ENV['S3_KEY'],
