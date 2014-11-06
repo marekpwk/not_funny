@@ -14,7 +14,7 @@ class MemesController < ApplicationController
     if @meme.save
       redirect_to demots_path, notice: "Your meme has been created"
     else
-      render 'new', notice: "Upload one more time"
+      render 'new', notice: "Upload onetime"
     end
   end
 
