@@ -5,7 +5,8 @@ class ImageUploader < CarrierWave::Uploader::Base
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
   include CarrierWave::MiniMagick
-
+  include Sprockets::Helpers::RailsHelper
+  include Sprockets::Helpers::IsolatedHelper
   # Choose what kind of storage to use for this uploader:
   # storage :file
   storage :fog
