@@ -1,11 +1,13 @@
 <h1>Demots#index</h1>
 <p>Find me in app/views/demots/index.html.erb</p>
 <div class="row">
-<% @demots.each do |demot| %>
-  <div class="large-8 large-centered columns demots-column">
+  <% @demots.each do |demot| %>
+    <div class="large-8 large-centered columns demots-column">
     <h3> <%= demot.title %></h3>
     <%= image_tag(demot.image) %>
-</div>
+    <i class="fi-arrow-up"></i>
+    <i class="fi-arrow-down"></i>
+  </div>
 
 <% end %>
 </div>

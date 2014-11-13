@@ -23,3 +23,12 @@
 .alert-form {
   color: #E21A1A;
 }
+.fi-arrow-up, .fi-arrow-down{
+font-size:3em;
+}
+.fi-arrow-down{
+  color:#D50529;
+}
+.fi-arrow-up{
+  color:#009D23;
+}
