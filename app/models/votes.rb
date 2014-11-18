@@ -2,12 +2,13 @@ class Vote < ActiveRecord::Base
   belongs_to :user
   belongs_to :demot
   validate :user_validator, on: :create
+  binding.pry
 
 
   def user_validator
-    # binding.pry
-    if demot.voters.ids.include?(user.id)
-      errors.add(:user_id, "already voted")
+    binding.pry
+    if Demot.find(user)
+      false
     else
       true
     end
