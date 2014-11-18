@@ -4,4 +4,5 @@ class Demot < ActiveRecord::Base
  validates :image, presence: true
  validates :user, presence: true
  validates :title, presence: true
+ has_many :votes
 end

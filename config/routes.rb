@@ -1,12 +1,17 @@
 Rails.application.routes.draw do
-
   root to: "demots#index"
   resources :users
   resources :sessions, only: [:new, :create, :destroy, :edit]
   match '/signup', to: 'users#new', via: 'get'
   match '/signin', to: 'sessions#new', via: 'get'
   match '/signout', to: 'sessions#destroy', via: 'delete'
-  resources :demots, only: [:index, :new, :create, :destroy]
+
+  resources :demots, only: [:index, :new, :create, :destroy, :edit,:update] do
+    member do
+      put :up
+      put :down
+    end
+  end
   resources :memes, only: [:index, :new, :create, :destroy]
   resources :templates, only: [:index, :new, :create, :destroy]
   # The priority is based upon order of creation: first created -> highest priority.
@@ -30,10 +35,12 @@ Rails.application.routes.draw do
   #       get 'short'
   #       post 'toggle'
   #     end
+
   #
   #     collection do
   #       get 'sold'
   #     end
+
   #   end
 
   # Example resource route with sub-resources:
@@ -48,12 +55,14 @@ Rails.application.routes.draw do
   #     resources :sales do
   #       get 'recent', on: :collection
   #     end
+
   #   end
 
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'
   #   end
+
   #   resources :posts, concerns: :toggleable
   #   resources :photos, concerns: :toggleable
 

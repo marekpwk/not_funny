@@ -21,6 +21,7 @@ CarrierWave.configure do |config|
         end
       end
     end
+
   elsif Rails.env.production?
     config.storage :fog
     config.fog_credentials = {
@@ -30,5 +31,6 @@ CarrierWave.configure do |config|
       # :region
     }
     config.fog_directory = ENV['S3_BUCKET_NAME']
+    config.cache_dir        = "#{Rails.root}/tmp/uploads"
   end
 end

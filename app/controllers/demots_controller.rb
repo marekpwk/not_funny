@@ -1,5 +1,6 @@
 class DemotsController < ApplicationController
-  before_filter :signed_in_user, only: [:new, :create]
+  before_filter :signed_in_user, only: [:new, :create, :up, :down]
+  # respond_to :html, :js
   def index
     @demots = Demot.all
   end
@@ -24,8 +25,35 @@ class DemotsController < ApplicationController
     redirect_to demots_path, notice: "Demot has been deleted"
   end
 
+  def edit
+    @demot = Demot.find(params[:id])
+  end
+
+  def up
+    # binding.pry
+    @demot = Demot.find(params[:id])
+    vote = Vote.create(demot_id: @demot.id, user_id: params[:user_id])
+    new_data = {demot_id: @demot.id}
+    respond_to do |format|
+      format.js
+    end
+  end
+
+  def down
+    @demot = Demot.find(params[:id])
+    # binding.pry
+    vote = Vote.find_by_user_id(params[:user_id])
+    if vote
+      vote.destroy
+    end
+    new_data = {demot_id: @demot.id}
+    respond_to do |format|
+      format.js
+    end
+  end
+
   private
   def demot_params
-    params.require(:demot).permit(:title, :image, :user_id)
+    params.require(:demot).permit(:title, :image)
   end
 end
