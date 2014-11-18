@@ -42,7 +42,7 @@ class DemotsController < ApplicationController
   def down
     @demot = Demot.find(params[:id])
     # binding.pry
-    vote = Vote.find_by_user_id(params[:user_id])
+    vote = Vote.where(user_id: params[:user_id], demot_id: @demot.id)[0]
     if vote
       vote.destroy
     end
