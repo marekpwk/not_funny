@@ -8,8 +8,6 @@ class Vote < ActiveRecord::Base
     # binding.pry
     if demot.voters.ids.include?(user.id)
       errors.add(:user_id, "already voted")
-    else
-      true
     end
   end
 end
