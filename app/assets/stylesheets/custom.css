@@ -27,9 +27,11 @@
 font-size:3em;
 }
 .fi-arrow-down{
+  padding: 2%;
   color:#D50529;
 }
 .fi-arrow-up{
+  padding: 2%;
   color:#009D23;
 }
 .demots-column p{
