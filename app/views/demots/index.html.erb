@@ -5,8 +5,10 @@
     <div class="large-8 large-centered columns demots-column">
     <h3> <%= demot.title %></h3>
     <%= image_tag(demot.image) %>
-    <i class="fi-arrow-up"></i>
-    <i class="fi-arrow-down"></i>
+    <div id="vote-<%=demot.id%>" style="display:none;"></div>
+    <%= link_to '',up_demot_path(demot, :user_id => current_user.id),method: "put",remote: true, :class=> "fi-arrow-up" %>
+    <%= link_to '', down_demot_path(demot, :user_id => current_user.id),method: "put", remote: true, :class=> "fi-arrow-down" %>
+    <p id="votes-<%=demot.id%>"><%=demot.votes.count %></p>
   </div>
 
 <% end %>
