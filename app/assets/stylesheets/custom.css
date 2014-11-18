@@ -32,3 +32,8 @@ font-size:3em;
 .fi-arrow-up{
   color:#009D23;
 }
+.demots-column p{
+  display: inline;
+  margin-left: 10%;
+  font-size: 3em;
+}
