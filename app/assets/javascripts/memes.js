@@ -17,7 +17,7 @@ $(window).load(function(){
       $("#meme_image").val(url)    
   }
 
-  imageObj.src = $("#canvas_image").attr('src');
+  imageObj.src = $("#canvas_image").html();
   imageObj.onload = function(){
     drawCanvas();
     updateText();
