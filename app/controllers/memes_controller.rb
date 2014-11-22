@@ -10,7 +10,7 @@ class MemesController < ApplicationController
 
   def create
     # binding.pry
-    pic = params[:meme][:image].split("base64")[1]
+    pic = params[:meme][:image].split("base64,")[1]
     tempfile = Tempfile.new("fileuploud")
     tempfile.binmode
     tempfile.write(Base64.decode64(pic))
