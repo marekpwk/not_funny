@@ -13,7 +13,7 @@ class MemesController < ApplicationController
     pic = params[:meme][:image].split("base64,")[1]
     tempfile = Tempfile.new("fileuploud")
     tempfile.binmode
-    binding.pry
+    # binding.pry
     tempfile.write(Base64.decode64(pic))
     # uploaded_file = ActionDispatch::Http::UploadedFile.new(:tempfile => tempfile, :filename=> "test.jpeg" , :original_filename=> "original_name")
     uploaded_file = ActionDispatch::Http::UploadedFile.new(:tempfile => tempfile,
