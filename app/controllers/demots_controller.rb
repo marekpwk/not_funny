@@ -10,6 +10,7 @@ class DemotsController < ApplicationController
   end
 
   def create
+    binding.pry
     @demot = Demot.new(demot_params)
     # binding.pry
     if @demot.save
