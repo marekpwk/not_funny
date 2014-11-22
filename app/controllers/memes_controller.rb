@@ -9,8 +9,12 @@ class MemesController < ApplicationController
   end
 
   def create
+    pic = params[:meme][:image].split("base64")[1]
+ 
+    decoded_pic = CarrierIO.new(Base64.decode64(pic))
+    params[:meme][:image] = decoded_pic
     @meme = Meme.new(meme_params)
-    @meme.image_data=(params[:meme][:image].split("base64,")[1])
+    # @meme.image_data=(params[:meme][:image].split("base64,")[1])
     if @meme.save
       redirect_to demots_path, notice: "Your meme has been created"
     else
