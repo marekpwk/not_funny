@@ -11,6 +11,7 @@ class DemotsController < ApplicationController
 
   def create
     @demot = Demot.new(demot_params)
+    # binding.pry
     if @demot.save
       redirect_to demots_path, notice: "Your demot has been created"
     else
@@ -54,6 +55,6 @@ class DemotsController < ApplicationController
 
   private
   def demot_params
-    params.require(:demot).permit(:title, :image)
+    params.require(:demot).permit(:title, :image, :user_id)
   end
 end
