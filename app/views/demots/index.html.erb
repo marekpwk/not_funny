@@ -6,9 +6,15 @@
     <h3> <%= demot.title %></h3>
     <%= image_tag(demot.image) %>
     <div id="vote-<%=demot.id%>" style="display:none;"></div>
+    <% if signed_in? %> 
     <%= link_to '',up_demot_path(demot, :user_id => current_user.id),method: "put",remote: true, :class=> "fi-arrow-up" %>
     <%= link_to '', down_demot_path(demot, :user_id => current_user.id),method: "put", remote: true, :class=> "fi-arrow-down" %>
     <p id="votes-<%=demot.id%>"><%=demot.votes.count %></p>
+  <% else %>
+    <%= link_to '', signin_path, :class=> "fi-arrow-up" %>
+    <%= link_to '', signin_path, :class=> "fi-arrow-down" %>
+    <p id="votes-<%=demot.id%>"><%=demot.votes.count %></p>
+  <% end %>
   </div>
 
 <% end %>
