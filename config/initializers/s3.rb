@@ -5,6 +5,7 @@ CarrierWave.configure do |config|
   #     CarrierWave.configure do |config|
   #       config.enable_processing =  false
   #     end
+
   #
   #     ImageUploader
   #     # use different dirs when testing
@@ -14,23 +15,30 @@ CarrierWave.configure do |config|
   #         def cache_dir
   #           "#{Rails.root}/spec/support/uploads/tmp"
   #         end
+
   #
   #         def store_dir
   #           "#{Rails.root}/spec/support/uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   #         end
+
   #       end
+
   #     end
+
   #   end
+
   #
   # elsif Rails.env.production?
-    config.storage :fog
-    config.fog_credentials = {
-      :provider => 'AWS',
-      :aws_access_key_id => ENV['S3_KEY'],
-      :aws_secret_access_key => ENV['S3_SECRET'],
-      # :region
-    }
-    config.fog_directory = ENV['S3_BUCKET_NAME']
-    config.cache_dir        = "#{Rails.root}/tmp/uploads"
-  end
+  config.storage :fog
+  config.fog_credentials = {
+    :provider => 'AWS',
+    :aws_access_key_id => ENV['S3_KEY'],
+    :aws_secret_access_key => ENV['S3_SECRET'],
+    # :region
+  }
+  config.fog_directory = ENV['S3_BUCKET_NAME']
+  config.cache_dir        = "#{Rails.root}/tmp/uploads"
+
+end
+
 # end
