@@ -5,6 +5,7 @@ $(window).load(function(){
     var imageObj = new Image();
 
     function drawCanvas(){
+      canvas.height = imageObj.height;
       context.drawImage(imageObj, 0, 0);
     }
     function updateText(){
