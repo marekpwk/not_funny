@@ -5,6 +5,11 @@ class ImageUploader < CarrierWave::Uploader::Base
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
   include CarrierWave::MiniMagick
+
+  def store_dir
+    "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
+  end
+
   # include Sprockets::Helpers::RailsHelper
   # include Sprockets::Helpers::IsolatedHelper
   # Choose what kind of storage to use for this uploader:
@@ -32,6 +37,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   version :thumb do
     process :resize_to_fit => [150, 150]
   end
+
   # def scale(width, height)
   #   # do something
   # end
@@ -52,8 +58,9 @@ class ImageUploader < CarrierWave::Uploader::Base
   # def filename
   #   "something.jpg" if original_filename
   # end
- def filename
-   "#{model.user_id}user#{secure_token}.#{file.extension}" if original_filename.present?
+
+  def filename
+    "#{model.user_id}user#{secure_token}.#{file.extension}" if original_filename.present?
   end
 
   protected
