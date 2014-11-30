@@ -1,8 +1,4 @@
 Rails.application.routes.draw do
-  namespace :admin do
-  get 'dashboard/index'
-  end
-
   root to: "demots#index"
   resources :users
   resources :sessions, only: [:new, :create, :destroy, :edit]
@@ -23,6 +19,7 @@ Rails.application.routes.draw do
   namespace :admin do
     match '', to: 'dashboard#index', via: 'get'
     resources :demots
+    resources :users
   end
 
   # You can have the root of your site routed with "root"
