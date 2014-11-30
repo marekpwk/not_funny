@@ -2,9 +2,11 @@ class Admin::UsersController < ApplicationController
   include ApplicationHelper
   before_filter :signed_in_user, only: [:index,:edit, :update]
   before_filter :admin_user
+
   def index
     @users = User.paginate(:page => params[:page])
   end
+
   def new
     @user = User.new
   end
@@ -27,6 +29,10 @@ class Admin::UsersController < ApplicationController
 
   def edit
     @user = User.find_by(id: params[:id])
+  end
+
+  def destroy
+    binding.pry
   end
 
   def update
@@ -57,5 +63,4 @@ class Admin::UsersController < ApplicationController
     @user = User.find(params[:id])
     redirect_to(root_path) unless current_user?(@user)
   end
-
 end

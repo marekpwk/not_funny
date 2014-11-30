@@ -1,6 +1,10 @@
 <h1>Users</h1>
-<%= will_paginate @users, renderer: FoundationPagination::Rails%>
+<%= will_paginate @users, renderer: FoundationPagination::Rails %>
+<ul>
 <% @users.each do |user| %>
-  <h3><%= user.name %></h3>
-<% end %>
-<%= will_paginate @users, renderer: FoundationPagination::Rails%>
+  <li> <%= link_to user.name, user %> 
+  | <%= link_to "delete", admin_user_path(user), method: :delete,remote: true, data: { confirm: "You sure?" } %>
+</li>
+  <% end %>
+</ul>  
+    <%= will_paginate @users, renderer: FoundationPagination::Rails %>
