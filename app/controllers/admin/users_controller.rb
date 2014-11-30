@@ -2,6 +2,9 @@ class Admin::UsersController < ApplicationController
   include ApplicationHelper
   before_filter :signed_in_user, only: [:index,:edit, :update]
   before_filter :admin_user
+  def index
+    @users = User.paginate(:page => params[:page])
+  end
   def new
     @user = User.new
   end

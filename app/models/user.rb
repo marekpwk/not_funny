@@ -9,6 +9,7 @@ class User < ActiveRecord::Base
   validates :email, presence: true, uniqueness: true,
     format: { with: /\A[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+\z/ }
   validate :password, length: {minimum: 6}
+  self.per_page = 20
   private
   def self.new_remember_token
     SecureRandom.urlsafe_base64
