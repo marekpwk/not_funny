@@ -1,4 +1,5 @@
 <h1>Users</h1>
+<%= will_paginate @users, renderer: FoundationPagination::Rails%>
 <% @users.each do |user| %>
   <h3><%= user.name %></h3>
 <% end %>
