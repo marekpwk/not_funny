@@ -32,7 +32,11 @@ class Admin::UsersController < ApplicationController
   end
 
   def destroy
-    binding.pry
+    @user = User.find(params[:id])
+    @user.destroy
+    respond_to do |format|
+      format.js
+    end
   end
 
   def update
