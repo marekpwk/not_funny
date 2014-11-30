@@ -29,6 +29,8 @@ gem 'fog'
 gem 'foundation-icons-sass-rails','~>3.0.0'
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
+gem 'will_paginate', '~> 3.0.6'
+gem "will_paginate-foundation"
 group :development, :test do
   gem 'rspec-rails', '~> 2.0'
   gem  'table_print'
