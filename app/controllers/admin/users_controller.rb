@@ -43,13 +43,14 @@ class Admin::UsersController < ApplicationController
   end
 
   def update
+    # binding.pry
     @user = User.find(params[:id])
-    if @user.update_attributes(user_params)
-      flash[:success] = "Profile updated"
-      sign_in @user
-      redirect_to @user
-    else
-      render "edit"
+    respond_to do |format|
+      if @user.update_attributes(user_params)
+        format.js
+      else
+        format.js { render :action => "edit" }
+      end
     end
   end
 
