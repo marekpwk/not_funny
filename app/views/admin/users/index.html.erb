@@ -1,10 +1,13 @@
 <h1>Users</h1>
 <%= will_paginate @users, renderer: FoundationPagination::Rails %>
 <ul>
-<% @users.each do |user| %>
-  <li id="<%= user.id %>-user"> <%= link_to user.name, user %> 
-  | <%= link_to "delete", admin_user_path(user), method: :delete,remote: true, data: { confirm: "You sure?" } %>
-</li>
-  <% end %>
-</ul>  
-    <%= will_paginate @users, renderer: FoundationPagination::Rails %>
+  <% @users.each do |user| %>
+    <li id="<%= user.id %>-user"> <%= link_to user.name, user %>
+| <%= link_to "delete", admin_user_path(user), method: :delete,remote: true, data: { confirm: "You sure?" } %>
+<%# <%= link_to "Edit", '#', data: {'reveal-id'=> "user-modal-#{ user.id}"} %1> %>
+<%= link_to "Edit", edit_admin_user_path(user), remote: true, data: {'reveal-id' => "user-modal-#{user.id}", 'reveal-ajax' => true}  %>
+  </li>
+  <div id="<%= user.id %>-user-hidden" style="display: none;"></div>
+<% end %>
+</ul>
+<%= will_paginate @users, renderer: FoundationPagination::Rails %>

@@ -1,0 +1,4 @@
+<div id="user-modal-<%= @user.id %>" class="reveal-modal" data-reveal>
+<%= render partial: 'users/form', locals: {:@user =>  @user} ,layout: false%>
+<a class="close-reveal-modal">&#215;</a>
+</div>
