@@ -1,7 +1,7 @@
-class UsersController < ApplicationController
+class Admin::UsersController < ApplicationController
+  include ApplicationHelper
   before_filter :signed_in_user, only: [:index,:edit, :update]
-  before_filter :correct_user, only: [:edit, :update]
-  before_filter :admin_user, only: [:index]
+  before_filter :admin_user
   def new
     @user = User.new
   end
@@ -55,9 +55,4 @@ class UsersController < ApplicationController
     redirect_to(root_path) unless current_user?(@user)
   end
 
-  def admin_user
-    unless current_user.admin?
-      redirect_to(root_path)
-    end
-  end
 end
