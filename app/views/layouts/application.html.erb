@@ -8,7 +8,7 @@
 
 <%= stylesheet_link_tag    "application" %>
 <%= javascript_include_tag "vendor/modernizr" %>
- <%= yield(:header) if @content_for_header %>
+<%= yield(:header) if @content_for_header %>
 <%= csrf_meta_tags %>
 </head>
 
@@ -29,13 +29,16 @@
       <li><a href="#">Top</a></li>
       <li><%= link_to "Add meme", new_demot_path %></li>
       <% if signed_in? %>
-        <li> <%= link_to "Profile", current_user %></li>
-        <li> <%= link_to "Settings", edit_user_path(current_user) %></li>
-        <li><%= link_to "Sign out", signout_path, method: "delete" %></li>
-      <% else %>  
+        <% if current_user.admin? %>
+          <li><%= link_to "Admin panel", admin_path %></li>
+    <% end %>
+      <li> <%= link_to "Profile", current_user %></li>
+      <li> <%= link_to "Settings", edit_user_path(current_user) %></li>
+      <li><%= link_to "Sign out", signout_path, method: "delete" %></li>
+    <% else %>
 
-      <li><%= link_to "Sign in", signin_path %><li>
-      <% end %>
+        <li><%= link_to "Sign in", signin_path %><li>
+    <% end %>
     </ul>
 
   </section>
@@ -44,14 +47,14 @@
   <% flash.each do |key, value| %>
     <div data-alert class="alert-box <%= key %>"><%= value %></div>
 <% end %>
-<div class="main row">
-<div class="col-main small-12 columns">
-  <%= yield %>
-</div>
-</div>
-<div class="debug clearfix">
-  <%= debug(params) if Rails.env.development? %>
-</div>
+  <div class="main row">
+    <div class="col-main small-12 columns">
+      <%= yield %>
+    </div>
+  </div>
+  <div class="debug clearfix">
+    <%= debug(params) if Rails.env.development? %>
+  </div>
 </div>
 
 <%= javascript_include_tag "application" %>
