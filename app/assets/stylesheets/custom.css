@@ -44,4 +44,11 @@ font-size:3em;
   list-style-type: none;
 }
 .user-name a{
- color: #ffffff}
+ color: #ffffff
+}
+.admin-panel li{
+  list-style-type: none;
+}
+.admin-panel a{
+ color: #ffffff
+}
