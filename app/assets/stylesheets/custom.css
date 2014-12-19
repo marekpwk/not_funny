@@ -39,3 +39,9 @@ font-size:3em;
   margin-left: 10%;
   font-size: 3em;
 }
+/* Admin panel */
+.users-list li{
+  list-style-type: none;
+}
+.user-name a{
+ color: #ffffff}
