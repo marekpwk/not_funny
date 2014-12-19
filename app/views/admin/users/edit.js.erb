@@ -1,2 +1,6 @@
+if ($('#user-modal-<%= @user.id %>').length) 
+{
+  $('#user-modal-<%= @user.id %>').remove();
+}  
 $("#<%= @user.id %>-user-hidden").append('<%= escape_javascript(render "modal")%>')
 $('#user-modal-<%= @user.id %>').foundation('reveal', 'open');
