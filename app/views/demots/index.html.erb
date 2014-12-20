@@ -4,7 +4,7 @@
     <h3> <%= demot.title %></h3>
     <%= image_tag(demot.image) %>
     <div id="vote-<%=demot.id%>" style="display:none;"></div>
-    <% if signed_in? %> 
+    <% if signed_in? %>
     <%= link_to '',up_demot_path(demot, :user_id => current_user.id),method: "put",remote: true, :class=> "fi-arrow-up" %>
     <%= link_to '', down_demot_path(demot, :user_id => current_user.id),method: "put", remote: true, :class=> "fi-arrow-down" %>
     <p id="votes-<%=demot.id%>"><%=demot.votes.count %></p>
@@ -13,7 +13,14 @@
     <%= link_to '', signin_path, :class=> "fi-arrow-down" %>
     <p id="votes-<%=demot.id%>"><%=demot.votes.count %></p>
   <% end %>
-  </div>
+  <a href="http://twitter.com/home?status=<%= demot.title %>" title="Share on Twitter" target="_blank" class= "sharing-buttons button radius small"><i class="fi-social-twitter"></i><span>Twitter</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=<%= demot.title %>" title="Share on Facebook" target="_blank" class="sharing-buttons button radius small"><i class="fi-social-facebook"></i> <span>Facebook</span></a>
+  
+</div>
 
 <% end %>
+
+<div class="test">
+  <i class="large fi-social-twitter"></i>
+  </div>
 </div>

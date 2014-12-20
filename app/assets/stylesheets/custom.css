@@ -13,7 +13,7 @@
 }
 .demots-column img{
    display: block;
-  max-width: 100%; 
+  max-width: 100%;
   margin: 0 auto;
 }
 .demots-column h3{
@@ -40,7 +40,7 @@ font-size:3em;
 .demots-column p{
   display: inline;
   margin-left: 10%;
-  font-size: 3em;
+  font-size: 1em;
 }
 /* Admin panel */
 .users-list li{
@@ -55,3 +55,22 @@ font-size:3em;
 .admin-panel a{
  color: #ffffff
 }
+.test{
+  width: 100px;
+  height: 100px;
+  color: white;
+}
+/* SOCIAL ICONS */
+i.fi-social-twitter, i.fi-social-facebook {
+  font-size: 1.4em;
+}
+.button.face{
+  background-color:#3a5795;
+}
+.button.sharing-buttons.small{
+  padding-top: 0.4em;
+  padding-bottom: 0.4em;
+}
+.button.sharing-buttons span{
+  font-size: 1.2em;
+}  
