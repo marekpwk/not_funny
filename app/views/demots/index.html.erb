@@ -1,19 +1,33 @@
 <div class="row">
+
   <% @demots.each do |demot| %>
     <div class="large-8 large-centered columns demots-column">
     <h3> <%= demot.title %></h3>
     <%= image_tag(demot.image) %>
-    <div id="vote-<%=demot.id%>" style="display:none;"></div>
-    <% if signed_in? %> 
-    <%= link_to '',up_demot_path(demot, :user_id => current_user.id),method: "put",remote: true, :class=> "fi-arrow-up" %>
-    <%= link_to '', down_demot_path(demot, :user_id => current_user.id),method: "put", remote: true, :class=> "fi-arrow-down" %>
-    <p id="votes-<%=demot.id%>"><%=demot.votes.count %></p>
-  <% else %>
-    <%= link_to '', signin_path, :class=> "fi-arrow-up" %>
-    <%= link_to '', signin_path, :class=> "fi-arrow-down" %>
-    <p id="votes-<%=demot.id%>"><%=demot.votes.count %></p>
-  <% end %>
+    <div id="vote-<%= demot.id %>" style="display:none;"></div>
+    <div class="row">
+      <div class="large-8 columns">
+        <p id="votes-<%= demot.id %>"><%= pluralize(demot.votes.count,"point") %></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-3 columns">
+        <% if signed_in? %>
+          <%= link_to '',up_demot_path(demot, :user_id => current_user.id),method: "put",remote: true, :class=> "fi-arrow-up" %>
+        <%= link_to '', down_demot_path(demot, :user_id => current_user.id),method: "put", remote: true, :class=> "fi-arrow-down" %>
+      <% else %>
+          <%= link_to '', signin_path, :class=> "fi-arrow-up" %>
+        <%= link_to '', signin_path, :class=> "fi-arrow-down" %>
+      <% end %>
+      </div>
+      <div class="large-6 large-offset-3 columns">
+        <a href="http://twitter.com/home?status=<%= demot.title %>" title="Share on Twitter" target="_blank" class= "sharing-buttons button radius small"><i class="fi-social-twitter"></i><span>Twitter</span></a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=<%= demot.title %>" title="Share on Facebook" target="_blank" class="sharing-buttons button radius small"><i class="fi-social-facebook"></i> <span>Facebook</span></a>
+      </div>
+    </div>
   </div>
 
 <% end %>
+
+
 </div>

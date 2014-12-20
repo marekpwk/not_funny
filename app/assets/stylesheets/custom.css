@@ -13,7 +13,7 @@
 }
 .demots-column img{
    display: block;
-  max-width: 100%; 
+  max-width: 100%;
   margin: 0 auto;
 }
 .demots-column h3{
@@ -27,20 +27,21 @@
   list-style-type: none;
 }
 .fi-arrow-up, .fi-arrow-down{
-font-size:3em;
+font-size:2.5em;
+margin: 0px;
 }
 .fi-arrow-down{
   padding: 2%;
-  color:#D50529;
+  color:#D50529h
 }
 .fi-arrow-up{
-  padding: 2%;
+  margin-right: 15%;
+  padding: 0 2% 0 2%; ;
   color:#009D23;
 }
 .demots-column p{
   display: inline;
-  margin-left: 10%;
-  font-size: 3em;
+  font-size: 1em;
 }
 /* Admin panel */
 .users-list li{
@@ -55,3 +56,17 @@ font-size:3em;
 .admin-panel a{
  color: #ffffff
 }
+/* SOCIAL ICONS */
+i.fi-social-twitter, i.fi-social-facebook {
+  font-size: 1.4em;
+}
+.button.face{
+  background-color:#3a5795;
+}
+.button.sharing-buttons.small{
+  padding-top: 0.4em;
+  padding-bottom: 0.4em;
+}
+.button.sharing-buttons span{
+  font-size: 1.2em;
+}  
