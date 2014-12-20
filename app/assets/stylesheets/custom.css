@@ -30,6 +30,9 @@
 font-size:2.5em;
 margin: 0px;
 }
+.arrows {
+  margin-left: 5%;
+}
 .fi-arrow-down{
   padding: 2%;
   color:#D50529h
@@ -40,7 +43,7 @@ margin: 0px;
   color:#009D23;
 }
 .votes{
- margin: 2% 0 0 2%;
+ margin: 2% 0 0 7%;
 }
 .demots-column p{
   display: inline;
