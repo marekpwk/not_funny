@@ -6,7 +6,7 @@
     <%= image_tag(demot.image) %>
     <div id="vote-<%= demot.id %>" style="display:none;"></div>
     <div class="row">
-      <div class="large-8 columns">
+      <div class="large-8  columns votes">
         <p id="votes-<%= demot.id %>"><%= pluralize(demot.votes.count,"point") %></p>
       </div>
     </div>

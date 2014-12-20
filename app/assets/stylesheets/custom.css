@@ -39,6 +39,9 @@ margin: 0px;
   padding: 0 2% 0 2%; ;
   color:#009D23;
 }
+.votes{
+ margin: 2% 0 0 2%;
+}
 .demots-column p{
   display: inline;
   font-size: 1em;
