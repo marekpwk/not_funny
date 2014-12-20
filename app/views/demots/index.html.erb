@@ -1,7 +1,7 @@
 <div class="row">
 
   <% @demots.each do |demot| %>
-    <div class="small-8 small-centered columns demots-column">
+    <div class="small-12 small-centered  large-8  large-centered columns demots-column">
     <h3> <%= demot.title %></h3>
     <%= image_tag(demot.image) %>
     <div id="vote-<%= demot.id %>" style="display:none;"></div>
