@@ -22,7 +22,7 @@
       </div>
       <div class="small-6 small-offset-2 columns">
         <a href="http://twitter.com/home?status=<%= request.host + url_for(demot) %>" title="<%= demot.title %>" target="_blank" class= "sharing-buttons button radius small"><i class="fi-social-twitter"></i><span>Twitter</span></a>
-        <a href="https://www.facebook.com/sharer/sharer.php?u=<%= demot.title %>" title="<%= demot.title %>" target="_blank" class="sharing-buttons button radius small face"><i class="fi-social-facebook"></i> <span>Facebook</span></a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=<%= request.host + url_for(demot) %>" title="<%= demot.title %>" target="_blank" class="sharing-buttons button radius small face"><i class="fi-social-facebook"></i> <span>Facebook</span></a>
       </div>
     </div>
   </div>
