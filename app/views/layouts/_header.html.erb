@@ -4,6 +4,7 @@
     <h1> <%= link_to "Not funny", root_path %> </h1>
     </li>
     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
   </ul>
 
   <section class="top-bar-section">
@@ -14,7 +15,7 @@
       <li><%= link_to "Add meme", new_demot_path %></li>
       <% if signed_in? %>
         <% if current_user.admin? %>
-          <li><%= link_to "Admin panel", admin_path %></li>
+        <li><%= link_to "Admin panel", admin_path %></li>
     <% end %>
       <li> <%= link_to "Profile", current_user %></li>
       <li> <%= link_to "Settings", edit_user_path(current_user) %></li>
@@ -27,4 +28,3 @@
 
   </section>
 </nav>
-
