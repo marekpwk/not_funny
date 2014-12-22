@@ -31,6 +31,7 @@ gem 'foundation-icons-sass-rails','~>3.0.0'
 gem 'spring',        group: :development
 gem 'will_paginate', '~> 3.0.6'
 gem "will_paginate-foundation"
+gem "twilio-ruby"
 group :development, :test do
   gem 'rspec-rails', '~> 2.0'
   gem  'table_print'
