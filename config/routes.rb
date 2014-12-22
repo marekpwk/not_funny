@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'notification/notify'
+
   root to: "demots#index"
   resources :users
   resources :sessions, only: [:new, :create, :destroy, :edit]
@@ -12,6 +14,7 @@ Rails.application.routes.draw do
       put :down
     end
   end
+
   resources :memes, only: [:index, :new, :create, :destroy]
   resources :templates, only: [:index, :new, :create, :destroy]
   # The priority is based upon order of creation: first created -> highest priority.
@@ -22,6 +25,11 @@ Rails.application.routes.draw do
     resources :users
   end
 
+  post 'twilio/voice' => 'twilio#voice'
+  post 'twilio/status' => 'twilio#status'
+  post 'twilio/inbound' => 'twilio#inbound'
+
+  post 'notifications/notify' => 'notifications#notify'
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
