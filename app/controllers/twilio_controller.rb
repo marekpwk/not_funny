@@ -9,7 +9,7 @@ class TwilioController < ApplicationController
 
   def voice
     response = Twilio::TwiML::Response.new do |r|
-      r.Say 'Hey there. Congrats on integrating Twilio into your Rails 4 app.', :voice => 'alice'
+      r.Say "Hey, don't call this number, just send us a picture message", :voice => 'alice'
       r.Play 'http://linode.rabasa.com/cantina.mp3'
     end
 
@@ -17,21 +17,20 @@ class TwilioController < ApplicationController
   end
 
   def inbound
-    # binding.pry
     user= User.first(10).last
     demot = Demot.new(title: "From cell", user: user )
     demot.remote_image_url = params[:MediaUrl0]
-    binding.pry
     if demot.save
       response = Twilio::TwiML::Response.new do |r|
-        r.SMS "Recieved"
+        r.SMS "Your message has been recieved."
       end
     else
 
       response = Twilio::TwiML::Response.new do |r|
-        r.SMS "Something went wrong"
+        r.SMS "Something went wrong, try onemore time."
       end
     end
+    render_twiml response
   end
 
   def status
