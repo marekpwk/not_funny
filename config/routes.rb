@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  get 'notification/notify'
-
+ 
   root to: "demots#index"
   resources :users
   resources :sessions, only: [:new, :create, :destroy, :edit]
@@ -8,7 +7,7 @@ Rails.application.routes.draw do
   match '/signin', to: 'sessions#new', via: 'get'
   match '/signout', to: 'sessions#destroy', via: 'delete'
 
-  resources :demots, only: [:index, :new, :create, :destroy, :edit,:update] do
+  resources :demots, only: [:index, :new, :create, :destroy, :edit, :update, :show] do
     member do
       put :up
       put :down
