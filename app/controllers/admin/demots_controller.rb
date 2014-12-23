@@ -26,7 +26,6 @@ class Admin::DemotsController < ApplicationController
   def destroy
     @demot = Demot.find(params[:id])
     @demot.destroy
-    binding.pry
     respond_to do |format|
       format.js
     end
