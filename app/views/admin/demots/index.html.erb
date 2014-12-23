@@ -7,7 +7,7 @@
       <p> Title: <%= demot.title %></p>
       <p> Author name: <%= demot.user.name %></p>
       <p> Author id: <%= demot.user.id %></p>
-<%= link_to "Delete","", class: "button tiny alert radius" %>
+      <%= link_to "Delete", admin_demot_path(demot), method: :delete, remote: true,  data: {confirm: "Are you sure???" }, class: "button tiny alert radius"%>
     </li>
   <% end %>
 </ul>
