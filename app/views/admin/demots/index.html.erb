@@ -1,12 +1,13 @@
 <h1> Demots</h1>
-<%= will_paginate @users, renderer: FoundationPagination::Rails %>
+<%= will_paginate @demots, renderer: FoundationPagination::Rails %>
 <ul class="demots-list" >
   <% @demots.each do |demot| %>
-    <li>
-      <%= link_to image_tag(demot.image.small_thumb), demot_path(demot) %>
+    <li id="<%= demot.id %>-demot" >
+    <%= link_to image_tag(demot.image.small_thumb), demot_path(demot), class: "small-thumb" %>
       <p> Title: <%= demot.title %></p>
       <p> Author name: <%= demot.user.name %></p>
       <p> Author id: <%= demot.user.id %></p>
+<%= link_to "Delete","", class: "button tiny alert radius" %>
     </li>
   <% end %>
 </ul>
