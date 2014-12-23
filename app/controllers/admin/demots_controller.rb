@@ -4,7 +4,7 @@ class Admin::DemotsController < ApplicationController
   before_filter :admin_user 
   # respond_to :html, :js
   def index
-    @demots = Demot.all
+    @demots = Demot.paginate(:page => params[:page])
   end
 
   def new
@@ -26,7 +26,11 @@ class Admin::DemotsController < ApplicationController
   def destroy
     @demot = Demot.find(params[:id])
     @demot.destroy
-    redirect_to demots_path, notice: "Demot has been deleted"
+    binding.pry
+    respond_to do |format|
+      format.js
+    end
+
   end
 
   def edit

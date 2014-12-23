@@ -51,7 +51,7 @@ margin: 0px;
   font-size: 1em;
 }
 /* Admin panel */
-.users-list li{
+.users-list li, .demots-list li{
   list-style-type: none;
 }
 .user-name a{
@@ -62,6 +62,14 @@ margin: 0px;
 }
 .admin-panel a{
  color: #ffffff
+}
+.small-thumb img{
+  border: 1px solid #ffffff;
+  margin-bottom: 1%;
+}
+.demots-list li {
+  border-bottom: 1px solid #ffffff;
+  margin-bottom: 2%;
 }
 /* SOCIAL ICONS */
 i.fi-social-twitter, i.fi-social-facebook {

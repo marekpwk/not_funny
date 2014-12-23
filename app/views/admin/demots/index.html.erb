@@ -1,1 +1,14 @@
-<h1> ADmin demots</h1>
+<h1> Demots</h1>
+<%= will_paginate @demots, renderer: FoundationPagination::Rails %>
+<ul class="demots-list" >
+  <% @demots.each do |demot| %>
+    <li id="<%= demot.id %>-demot" >
+    <%= link_to image_tag(demot.image.small_thumb), demot_path(demot), class: "small-thumb" %>
+      <p> Title: <%= demot.title %></p>
+      <p> Author name: <%= demot.user.name %></p>
+      <p> Author id: <%= demot.user.id %></p>
+      <%= link_to "Delete", admin_demot_path(demot), method: :delete, remote: true,  data: {confirm: "Are you sure???" }, class: "button tiny alert radius"%>
+    </li>
+  <% end %>
+</ul>
+<%= will_paginate @users, renderer: FoundationPagination::Rails %>
