@@ -39,7 +39,9 @@ class ImageUploader < CarrierWave::Uploader::Base
   end
 
   version :small_thumb, :from_version => :thumb do
-    process resize_to_fill: [30, 30]
+    process :convert => 'jpg'
+    process :resize_to_fill => [40, 40]
+
   end
   # def scale(width, height)
   #   # do something

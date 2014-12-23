@@ -1,1 +1,13 @@
-<h1> ADmin demots</h1>
+<h1> Demots</h1>
+<%= will_paginate @users, renderer: FoundationPagination::Rails %>
+<ul class="demots-list" >
+  <% @demots.each do |demot| %>
+    <li>
+      <%= link_to image_tag(demot.image.small_thumb), demot_path(demot) %>
+      <p> Title: <%= demot.title %></p>
+      <p> Author name: <%= demot.user.name %></p>
+      <p> Author id: <%= demot.user.id %></p>
+    </li>
+  <% end %>
+</ul>
+<%= will_paginate @users, renderer: FoundationPagination::Rails %>

@@ -4,7 +4,7 @@ class Admin::DemotsController < ApplicationController
   before_filter :admin_user 
   # respond_to :html, :js
   def index
-    @demots = Demot.all
+    @demots = Demot.paginate(:page => params[:page])
   end
 
   def new

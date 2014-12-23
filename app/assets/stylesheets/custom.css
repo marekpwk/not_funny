@@ -51,7 +51,7 @@ margin: 0px;
   font-size: 1em;
 }
 /* Admin panel */
-.users-list li{
+.users-list li, .demots-list li{
   list-style-type: none;
 }
 .user-name a{
