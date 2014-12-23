@@ -17,8 +17,9 @@ class TwilioController < ApplicationController
   end
 
   def inbound
-    user= User.first(10).last
-    demot = Demot.new(title: "From cell", user: user )
+    user= User.find(120)    # User.find(ENV['MMS_USER'])
+    title = params[:Body] || "Sent from cell"
+    demot = Demot.new(title: title, user: user )
     demot.remote_image_url = params[:MediaUrl0]
     if demot.save
       response = Twilio::TwiML::Response.new do |r|
@@ -27,7 +28,7 @@ class TwilioController < ApplicationController
     else
 
       response = Twilio::TwiML::Response.new do |r|
-        r.SMS "Something went wrong, try onemore time."
+        r.SMS "Something went wrong, try one more time."
       end
     end
     render_twiml response
@@ -36,4 +37,5 @@ class TwilioController < ApplicationController
   def status
     render_twiml Twilio::TwiML::Response.new
   end
+
 end
