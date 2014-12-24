@@ -32,9 +32,11 @@ images_height = %w{300 400 500 600 800}
 end
 puts "Done with images, populating votes now..."
 500.times do |i|
-  Vote.create(demot_id: demots[0..6].sample.id, user_id: users.sample.id)
+  vote = Vote.new(demot_id: demots[0..6].sample.id, user_id: users.sample.id)
+  vote.save
 end
 1000.times do |i|
-  Vote.create(demot_id: demots.sample.id, user_id: users.sample.id)
+ vote = Vote.new(demot_id: demots.sample.id, user_id: users.sample.id)
+ vote.save
 end 
 puts "Done!!"
