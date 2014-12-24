@@ -20,6 +20,9 @@
 .demots-column h3{
   color: #EEEEEE;
 }
+.demots-main ul.pagination{
+  margin-left:50px;
+}
 /* form errors */
 .alert-form {
   color: #E21A1A;

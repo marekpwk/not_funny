@@ -1,0 +1,5 @@
+$("#demots-wrapper").append('<%= j render "demots" %>');
+<% if @demots.next_page %>
+  $('.pagination').replaceWith('<%= j will_paginate @demots, renderer: FoundationPagination::Rails %>');
+  $('#loader').empty();
+<% end %>
