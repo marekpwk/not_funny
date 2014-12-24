@@ -18,7 +18,7 @@ class TwilioController < ApplicationController
 
   def inbound
     user= User.find(ENV['MMS_USER'])
-    title = "Sent from cell"
+    title = params[:Body].empty? ? "Sent from cell" : params[:body]
     demot = Demot.new(title: title, user: user )
     demot.remote_image_url = params[:MediaUrl0]
     if demot.save
