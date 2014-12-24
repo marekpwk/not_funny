@@ -2,7 +2,7 @@ class DemotsController < ApplicationController
   before_filter :signed_in_user, only: [:new, :create, :up, :down]
   # respond_to :html, :js
   def index
-    @demots = Demot.paginate(:page => params[:page], :per_page => 10)
+    @demots = Demot.order(created_at: :desc).paginate(:page => params[:page], :per_page => 10)
     respond_to do |format|
       format.html
       format.js
