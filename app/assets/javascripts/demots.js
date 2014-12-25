@@ -1,5 +1,5 @@
 jQuery(document).ready(function(){
-  if($('#demots-wrapper .pagination').length){
+  if($('.demots-pag .pagination').length){
     $('.pagination').hide();
     $(window).scroll(function(){
       var url = $('.pagination a[rel="next"]').attr('href');
