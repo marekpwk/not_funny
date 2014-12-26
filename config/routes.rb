@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
- 
+
   root to: "demots#index"
   resources :users
   resources :sessions, only: [:new, :create, :destroy, :edit]
@@ -11,8 +11,10 @@ Rails.application.routes.draw do
     member do
       put :up
       put :down
+      get :top
     end
   end
+  match '/top', to: 'demots#top', via: 'get'
 
   resources :memes, only: [:index, :new, :create, :destroy]
   resources :templates, only: [:index, :new, :create, :destroy]

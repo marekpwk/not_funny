@@ -52,10 +52,16 @@ class DemotsController < ApplicationController
     if vote
       vote.destroy
     end
+
     new_data = {demot_id: @demot.id}
     respond_to do |format|
       format.js
     end
+  end
+
+  def top
+    @demots = Demot.order(created_at: :desc).paginate(:page => params[:page], :per_page => 10)
+    render 'index'
   end
 
   private
