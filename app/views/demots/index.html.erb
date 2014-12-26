@@ -2,7 +2,7 @@
   <%= render "demots" %>
 
 </div>
-<div class="small-12 small-centered  large-8  large-centered columns demots-main">
+<div class="small-12 small-centered  large-8  large-centered columns demots-main demots-pag">
   <%= will_paginate @demots, renderer: FoundationPagination::Rails %>
 </div>
 <div id="loader"></div>
