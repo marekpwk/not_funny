@@ -1,8 +1,9 @@
 class DemotsController < ApplicationController
+  require 'will_paginate/array'
   before_filter :signed_in_user, only: [:new, :create, :up, :down]
   # respond_to :html, :js
   def index
-    @demots = Demot.paginate(:page => params[:page], :per_page => 10)
+    @demots = Demot.order(created_at: :desc).paginate(:page => params[:page], :per_page => 10)
     respond_to do |format|
       format.html
       format.js
@@ -39,6 +40,7 @@ class DemotsController < ApplicationController
     # binding.pry
     @demot = Demot.find(params[:id])
     vote = Vote.create(demot_id: @demot.id, user_id: params[:user_id])
+    @demot.reload
     new_data = {demot_id: @demot.id}
     respond_to do |format|
       format.js
@@ -52,10 +54,17 @@ class DemotsController < ApplicationController
     if vote
       vote.destroy
     end
+
+    @demot.reload
     new_data = {demot_id: @demot.id}
     respond_to do |format|
       format.js
     end
+  end
+
+  def top
+    @demots = Demot.order(total_votes: :desc).first(50).paginate(:page => params[:page], :per_page => 10)
+    render 'index'
   end
 
   private
