@@ -3,6 +3,7 @@
 }
 .main-container{
   background-color: #2C2C2C ;
+  min-height: 100%;
 }
 .demots-column{
   background-color: #1D1B1B;
@@ -54,8 +55,10 @@ margin: 0px;
   font-size: 1em;
 }
 /* Admin panel */
-.users-list li, .demots-list li{
+.users-list li, .demots-list li, .templates-list li{
   list-style-type: none;
+  border-bottom: 1px solid #ffffff;
+  margin-bottom: 2%;
 }
 .user-name a{
  color: #ffffff
@@ -69,10 +72,6 @@ margin: 0px;
 .small-thumb img{
   border: 1px solid #ffffff;
   margin-bottom: 1%;
-}
-.demots-list li {
-  border-bottom: 1px solid #ffffff;
-  margin-bottom: 2%;
 }
 /* SOCIAL ICONS */
 i.fi-social-twitter, i.fi-social-facebook {

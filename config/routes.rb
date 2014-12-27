@@ -16,13 +16,13 @@ Rails.application.routes.draw do
   match '/top', to: 'demots#top', via: 'get'
 
   resources :memes, only: [:index, :new, :create, :destroy]
-  resources :templates, only: [:index, :new, :create, :destroy]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
   namespace :admin do
     match '', to: 'dashboard#index', via: 'get'
     resources :demots
     resources :users
+    resources :templates
   end
 
   post 'twilio/voice' => 'twilio#voice'
