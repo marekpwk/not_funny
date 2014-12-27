@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20141226195427) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "type"
-    t.integer  "total_votes"
+    t.integer  "total_votes", default: 0
   end
 
   create_table "templates", force: true do |t|
