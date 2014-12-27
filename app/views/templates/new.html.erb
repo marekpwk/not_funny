@@ -1,8 +1,0 @@
-<h1>Create new meme</h1>
-<%= form_for @template, html: { multipart: true } do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <%= f.label :image %>
-  <%= f.file_field :image %>
-  <%= f.submit "Upload", class: "button radius" %>
-<% end %>
