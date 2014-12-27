@@ -1,0 +1,14 @@
+<h1>Templates</h1><%= link_to "Create new template", new_admin_template_path, class: "button tiny radius success" %>
+<%= will_paginate @templates, renderer: FoundationPagination::Rails %>
+<ul class="templates-list" >
+  <% @templates.each do |template| %>
+    <li id="<%= template.id %>-template" >
+    <%= link_to image_tag(template.image.small_thumb), admin_template_path(template), class: "small-thumb" %>
+      <p> Title: <%= template.title %></p>
+      <p> Author name: <%= template.user.name %></p>
+      <p> Author id: <%= template.user.id %></p>
+      <%= link_to "Delete", admin_template_path(template), method: :delete, remote: true,  data: {confirm: "Are you sure???" }, class: "button tiny alert radius"%>
+    </li>
+  <% end %>
+</ul>
+<%= will_paginate @users, renderer: FoundationPagination::Rails %>
