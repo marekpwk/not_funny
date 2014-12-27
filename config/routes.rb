@@ -11,7 +11,6 @@ Rails.application.routes.draw do
     member do
       put :up
       put :down
-      get :top
     end
   end
   match '/top', to: 'demots#top', via: 'get'

@@ -12,7 +12,7 @@
       <!-- Right Nav Section -->
       <ul class="right">
         <li><a href="#">Waiting</a></li>
-        <li><a href="#">Top</a></li>
+        <li><%= link_to "Top", top_path %></li>
         <li><%= link_to "Add meme", new_demot_path %></li>
         <% if signed_in? %>
           <% if current_user.admin? %>
