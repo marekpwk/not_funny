@@ -6,7 +6,7 @@
   <div id="vote-<%= demot.id %>" style="display:none;"></div>
   <div class="row">
     <div class="small-8  columns votes">
-      <p id="votes-<%= demot.id %>"><%= pluralize(demot.votes.count,"point") %></p>
+      <p id="votes-<%= demot.id %>"><%= pluralize(demot.total_votes,"point") %></p>
     </div>
   </div>
   <div class="row">

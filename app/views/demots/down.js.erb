@@ -1,1 +1,1 @@
-$("#votes-<%= @demot.id %>").html("<%= pluralize(@demot.votes.count, "point") %>")
+$("#votes-<%= @demot.id %>").html("<%= pluralize(@demot.total_votes, "point") %>")

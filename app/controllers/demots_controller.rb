@@ -39,6 +39,7 @@ class DemotsController < ApplicationController
     # binding.pry
     @demot = Demot.find(params[:id])
     vote = Vote.create(demot_id: @demot.id, user_id: params[:user_id])
+    @demot.reload
     new_data = {demot_id: @demot.id}
     respond_to do |format|
       format.js
@@ -52,7 +53,8 @@ class DemotsController < ApplicationController
     if vote
       vote.destroy
     end
-
+    
+    @demot.reload
     new_data = {demot_id: @demot.id}
     respond_to do |format|
       format.js
