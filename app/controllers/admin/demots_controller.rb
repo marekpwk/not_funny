@@ -73,8 +73,6 @@ class Admin::DemotsController < ApplicationController
 
   def sort_column
     Demot.column_names.include?(params[:sort]) ? params[:sort] : "id"
-
-    params[:sort] || "id"
   end
 
   def sort_direction
