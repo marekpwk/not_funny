@@ -5,18 +5,19 @@
 <table class="demots-list">
   <thead>
     <tr>
-      <th width="100">Id</th>
+      <th width="100"><%= sortable("id") %></th>
       <th widh="150">Image</th>
-      <th widh="150">Author </th>
-      <th widh="150">Votes </th>
-      <th widht="150">Created at</th>
+      <th widh="150"><%= sortable("title") %> </th>
+      <th widh="150"><%= sortable("user_id", "Author") %> </th>
+      <th widh="150"><%= sortable("total_votes", "Votes") %> </th>
+      <th widht="200"><%= sortable("created_at", "Created at")%> </th>
       <th widh="150">Action </th>
       <tbody>
   <% @demots.each do |demot| %>
     <tr id="<%= demot.id %>-demot">
       <td><%= demot.id %></td>
       <td><%= link_to image_tag(demot.image.small_thumb), demot_path(demot), class: "small-thumb" %></td>
-      <!-- <p> Title: <%= demot.title %></p> -->
+      <td><%= demot.title %></td>
       <td> <%= demot.user.name %></td>
       <td><%= demot.total_votes %></td>
       <td><%= demot.created_at %></td>

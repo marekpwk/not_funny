@@ -1,9 +1,10 @@
 class Demot < ActiveRecord::Base
- belongs_to :user
+ belongs_to :user, foreign_key: "user_id"
   mount_uploader :image, ImageUploader
  validates :image, presence: true
  validates :user, presence: true
  validates :title, presence: true
  has_many :votes
  has_many :voters, through: :votes, source: :user
+
 end
