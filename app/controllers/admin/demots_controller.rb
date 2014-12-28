@@ -1,10 +1,17 @@
 class Admin::DemotsController < ApplicationController
   include ApplicationHelper
+  require 'will_paginate/array'
+  helper_method :sort_column, :sort_direction
   before_filter :signed_in_user, only: [:new, :create, :up, :down]
-  before_filter :admin_user 
+  before_filter :admin_user
   # respond_to :html, :js
   def index
-    @demots = Demot.paginate(:page => params[:page])
+    if params[:search]
+    @demots = Demot.search(params[:search]).order(sort_column + "  " +  sort_direction).paginate(:page => params[:page], :per_page => 10)
+    else
+
+    @demots = Demot.order(sort_column + "  " +  sort_direction).paginate(:page => params[:page], :per_page => 10)
+    end
   end
 
   def new
@@ -29,7 +36,6 @@ class Admin::DemotsController < ApplicationController
     respond_to do |format|
       format.js
     end
-
   end
 
   def edit
@@ -53,6 +59,7 @@ class Admin::DemotsController < ApplicationController
     if vote
       vote.destroy
     end
+
     new_data = {demot_id: @demot.id}
     respond_to do |format|
       format.js
@@ -62,5 +69,15 @@ class Admin::DemotsController < ApplicationController
   private
   def demot_params
     params.require(:demot).permit(:title, :image, :user_id)
+  end
+
+  def sort_column
+    Demot.column_names.include?(params[:sort]) ? params[:sort] : "id"
+
+    params[:sort] || "id"
+  end
+
+  def sort_direction
+    %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
   end
 end
