@@ -1,7 +1,7 @@
 <h1> Demots</h1>
 
 <div class="small-12 small-centered  large-12  large-centered columns ">
-
+<%= will_paginate @demots, renderer: FoundationPagination::Rails %>
 <table class="demots-list">
   <thead>
     <tr>
@@ -29,5 +29,5 @@
  </thead>
 
 </table>
-
+<%= will_paginate @demots, renderer: FoundationPagination::Rails %>
 </div>
