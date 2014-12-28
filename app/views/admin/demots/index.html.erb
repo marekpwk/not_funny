@@ -1,40 +1,46 @@
-<h1> Demots</h1>
-<%= form_tag admin_demots_path, method: :get do %>
-  <p>
+<h1>Manage demotivators and memes</h1>
+<div class="row">
+  <div class="small-3  columns">
+    <%= form_tag admin_demots_path, method: :get do %>
+      <%= hidden_field_tag :direction, params[:direction] %>
+      <%= hidden_field_tag :sort, params[:sort] %>
+      <p>
     <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Search", :name => nil%>
-
-  </p>
-
-<% end %>
-<div class="small-12 small-centered  large-12  large-centered columns ">
-<%= will_paginate @demots, renderer: FoundationPagination::Rails %>
-<table class="demots-list">
-  <thead>
-    <tr>
-      <th width="100"><%= sortable("id") %></th>
-      <th widh="150">Image</th>
-      <th widh="150"><%= sortable("title") %> </th>
-      <th widh="150"><%= sortable("user_id", "Author") %> </th>
-      <th widh="150"><%= sortable("total_votes", "Votes") %> </th>
-      <th widht="200"><%= sortable("created_at", "Created at")%> </th>
-      <th widh="150">Action </th>
-      <tbody>
-  <% @demots.each do |demot| %>
-    <tr id="<%= demot.id %>-demot">
-      <td><%= demot.id %></td>
-      <td><%= link_to image_tag(demot.image.small_thumb), demot_path(demot), class: "small-thumb" %></td>
-      <td><%= demot.title %></td>
-      <td> <%= demot.user.name %></td>
-      <td><%= demot.total_votes %></td>
-      <td><%= demot.created_at %></td>
-      <td> <%= link_to "Delete", admin_demot_path(demot), method: :delete, remote: true,  data: {confirm: "Are you sure???" }, class: "button tiny alert radius"%></td>
-    </tr>
+    <%= submit_tag "Search by title", :name => nil, class: "button tiny radius" %>
+    </p>
   <% end %>
-      </tbody>
-    </tr>
- </thead>
+  </div>
+</div>
+<div class="row">
+  <div class="small-12 small-centered  large-12  large-centered columns ">
+    <%= will_paginate @demots, renderer: FoundationPagination::Rails %>
+    <table class="demots-list">
+      <thead>
+        <tr>
+          <th width="100"><%= sortable("id") %></th>
+          <th widh="150">Image</th>
+          <th widh="150"><%= sortable("title") %> </th>
+          <th widh="150"><%= sortable("user_id", "Author") %> </th>
+          <th widh="150"><%= sortable("total_votes", "Votes") %> </th>
+          <th widht="200"><%= sortable("created_at", "Created at") %> </th>
+          <th widh="150">Action </th>
+          <tbody>
+          <% @demots.each do |demot| %>
+            <tr id="<%= demot.id %>-demot">
+            <td><%= demot.id %></td>
+            <td><%= link_to image_tag(demot.image.small_thumb), demot_path(demot), class: "small-thumb" %></td>
+            <td><%= demot.title %></td>
+            <td> <%= demot.user.name %></td>
+            <td><%= demot.total_votes %></td>
+            <td><%= demot.created_at %></td>
+            <td> <%= link_to "Delete", admin_demot_path(demot), method: :delete, remote: true,  data: {confirm: "Are you sure???" }, class: "button tiny alert radius" %></td>
+          </tr>
+        <% end %>
+          </tbody>
+        </tr>
+      </thead>
 
-</table>
-<%= will_paginate @demots, renderer: FoundationPagination::Rails %>
+    </table>
+    <%= will_paginate @demots, renderer: FoundationPagination::Rails %>
+  </div>
 </div>
