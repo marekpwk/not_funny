@@ -1,14 +1,32 @@
 <h1> Demots</h1>
-<%= will_paginate @demots, renderer: FoundationPagination::Rails %>
-<ul class="demots-list" >
+
+<div class="small-12 small-centered  large-12  large-centered columns ">
+
+<table class="demots-list">
+  <thead>
+    <tr>
+      <th width="100">Id</th>
+      <th widh="150">Image</th>
+      <th widh="150">Author </th>
+      <th widh="150">Votes </th>
+      <th widht="150">Created at</th>
+      <th widh="150">Action </th>
+      <tbody>
   <% @demots.each do |demot| %>
-    <li id="<%= demot.id %>-demot" >
-    <%= link_to image_tag(demot.image.small_thumb), demot_path(demot), class: "small-thumb" %>
-      <p> Title: <%= demot.title %></p>
-      <p> Author name: <%= demot.user.name %></p>
-      <p> Author id: <%= demot.user.id %></p>
-      <%= link_to "Delete", admin_demot_path(demot), method: :delete, remote: true,  data: {confirm: "Are you sure???" }, class: "button tiny alert radius"%>
-    </li>
+    <tr id="<%= demot.id %>-demot">
+      <td><%= demot.id %></td>
+      <td><%= link_to image_tag(demot.image.small_thumb), demot_path(demot), class: "small-thumb" %></td>
+      <!-- <p> Title: <%= demot.title %></p> -->
+      <td> <%= demot.user.name %></td>
+      <td><%= demot.total_votes %></td>
+      <td><%= demot.created_at %></td>
+      <td> <%= link_to "Delete", admin_demot_path(demot), method: :delete, remote: true,  data: {confirm: "Are you sure???" }, class: "button tiny alert radius"%></td>
+    </tr>
   <% end %>
-</ul>
-<%= will_paginate @users, renderer: FoundationPagination::Rails %>
+      </tbody>
+    </tr>
+ </thead>
+
+</table>
+
+</div>
