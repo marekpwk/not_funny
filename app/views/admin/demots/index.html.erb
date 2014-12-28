@@ -1,5 +1,12 @@
 <h1> Demots</h1>
+<%= form_tag admin_demots_path, method: :get do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil%>
 
+  </p>
+
+<% end %>
 <div class="small-12 small-centered  large-12  large-centered columns ">
 <%= will_paginate @demots, renderer: FoundationPagination::Rails %>
 <table class="demots-list">
