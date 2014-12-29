@@ -18,12 +18,12 @@
         <table class="admin-list">
           <thead>
             <tr>
-              <th width="100">Id</th>
-              <th widh="150">Name</th>
-              <th widh="150">Email </th>
-              <th widh="150">Admin</th>
-              <th widht="200">Created at </th>
-              <th widh="150">Action</th>
+              <th width="100"><%= sortable("id") %></th>
+              <th widh="150"><%= sortable("name") %></th>
+              <th widh="150"><%= sortable("email") %> </th>
+              <th widh="150"><%= sortable("admin") %></th>
+              <th widht="200"><%= sortable("created_at", "Created at") %></th>
+              <th widh="150">Actions</th>
               <tbody>
               <% @users.each do |user| %>
                 <tr id="<%= user.id %>-user">
