@@ -9,7 +9,6 @@ class Admin::DemotsController < ApplicationController
     if params[:search]
       @demots = Demot.search(params[:search]).order(sort_column + "  " +  sort_direction).paginate(:page => params[:page], :per_page => 10)
     else
-
       @demots = Demot.order(sort_column + "  " +  sort_direction).paginate(:page => params[:page], :per_page => 10)
     end
   end

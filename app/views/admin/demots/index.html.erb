@@ -31,7 +31,7 @@
             <td><%= demot.id %></td>
             <td><%= link_to image_tag(demot.image.small_thumb), demot_path(demot), class: "small-thumb" %></td>
             <td><%= demot.title %></td>
-            <td> <%= demot.user.name %></td>
+           <td> <%= demot.user.name %></td>
             <td><%= demot.total_votes %></td>
             <td><%= demot.created_at %></td>
             <td> <%= link_to "Delete", admin_demot_path(demot), method: :delete, remote: true,  data: {confirm: "Are you sure???" }, class: "button tiny alert radius" %></td>
