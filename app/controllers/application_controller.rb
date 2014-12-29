@@ -6,12 +6,10 @@ class ApplicationController < ActionController::Base
   
   private
 
-  def demot_params
-    params.require(:demot).permit(:title, :image, :user_id)
-  end
 
   def sort_column
-    Demot.column_names.include?(params[:sort]) ? params[:sort] : "id"
+    class_name = controller_name.classify.constantize
+    class_name.column_names.include?(params[:sort]) ? params[:sort] : "id"
   end
 
   def sort_direction
