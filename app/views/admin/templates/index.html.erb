@@ -1,14 +1,28 @@
 <h1>Templates</h1><%= link_to "Create new template", new_admin_template_path, class: "button tiny radius success" %>
 <%= will_paginate @templates, renderer: FoundationPagination::Rails %>
-<ul class="templates-list" >
-  <% @templates.each do |template| %>
-    <li id="<%= template.id %>-template" >
-    <%= link_to image_tag(template.image.small_thumb), admin_template_path(template), class: "small-thumb" %>
-      <p> Title: <%= template.title %></p>
-      <p> Author name: <%= template.user.name %></p>
-      <p> Author id: <%= template.user.id %></p>
-      <%= link_to "Delete", admin_template_path(template), method: :delete, remote: true,  data: {confirm: "Are you sure???" }, class: "button tiny alert radius"%>
-    </li>
-  <% end %>
-</ul>
+    <table class="admin-list">
+      <thead>
+        <tr>
+          <th width="100">Id</th>
+          <th widh="150">Image</th>
+          <th widh="150">Title </th>
+          <th widh="150">Author</th>
+          <th widht="200">Created at </th>
+          <th widh="150">Action </th>
+          <tbody>
+          <% @templates.each do |template| %>
+            <tr id="<%= template.id %>-template">
+            <td><%= template.id %></td>
+            <td><%= link_to image_tag(template.image.small_thumb), admin_template_path(template), class: "small-thumb" %></td>
+            <td><%= template.title %></td>
+            <td> <%= template.user.name %></td>
+            <td><%= template.created_at %></td>
+            <td> <%= link_to "Delete", admin_template_path(template), method: :delete, remote: true,  data: {confirm: "Are you sure???" }, class: "button tiny alert radius" %></td>
+          </tr>
+        <% end %>
+          </tbody>
+        </tr>
+      </thead>
+
+    </table>
 <%= will_paginate @users, renderer: FoundationPagination::Rails %>
