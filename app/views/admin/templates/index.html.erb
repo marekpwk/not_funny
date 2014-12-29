@@ -1,5 +1,8 @@
-<h1>Templates</h1><%= link_to "Create new template", new_admin_template_path, class: "button tiny radius success" %>
-<%= will_paginate @templates, renderer: FoundationPagination::Rails %>
+<div class="row">
+  <div class="small-8 small-centered  large-8  large-centered columns ">
+
+    <h1>Manage meme templates</h1><%= link_to "Create new template", new_admin_template_path, class: "button tiny radius success" %>
+  <%= will_paginate @templates, renderer: FoundationPagination::Rails %>
     <table class="admin-list">
       <thead>
         <tr>
@@ -25,4 +28,6 @@
       </thead>
 
     </table>
-<%= will_paginate @users, renderer: FoundationPagination::Rails %>
+    <%= will_paginate @users, renderer: FoundationPagination::Rails %>
+  </div>
+</div>
