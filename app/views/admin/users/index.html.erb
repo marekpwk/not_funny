@@ -1,14 +1,48 @@
-<h1>Users</h1>
-<%= will_paginate @users, renderer: FoundationPagination::Rails %>
-<ul class="users-list">
-  <% @users.each do |user| %>
-    <li class="user-name" id="<%= user.id %>-user"> <%= link_to user.name, user %>
-  <ul class="button-group even-2">  
-<%= link_to "Edit", edit_admin_user_path(user), remote: true, data: {'reveal-id' => "user-modal-#{user.id}", 'reveal-ajax' => true}, class: "button tiny radius"  %>
-<%= link_to "Delete", admin_user_path(user), method: :delete,remote: true, data: { confirm: "You sure?" }, class: "button tiny alert radius" %>
-</ul>
-  </li>
-  <div id="<%= user.id %>-user-hidden" style="display: none;"></div>
-<% end %>
-</ul>
-<%= will_paginate @users, renderer: FoundationPagination::Rails %>
+<h1>Manage demotivators and memes</h1>
+<div class="row">
+  <div class="small-3  columns">
+    <%= form_tag admin_users_path, method: :get do %>
+      <%= hidden_field_tag :direction, params[:direction] %>
+    <%= hidden_field_tag :sort, params[:sort] %>
+    <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search by title", :name => nil, class: "button tiny radius" %>
+    </p>
+  <% end %>
+  </div>
+</div>
+<div class="row">
+  <div class="small-12 small-centered  large-12  large-centered columns ">
+    <%= will_paginate @users, renderer: FoundationPagination::Rails %>
+
+        <table class="admin-list">
+          <thead>
+            <tr>
+              <th width="100">Id</th>
+              <th widh="150">Name</th>
+              <th widh="150">Email </th>
+              <th widh="150">Admin</th>
+              <th widht="200">Created at </th>
+              <th widh="150">Action</th>
+              <tbody>
+              <% @users.each do |user| %>
+                <tr id="<%= user.id %>-user">
+                <td><%= user.id %></td>
+                <td><%= user.name %></td>
+                <td><%= user.email %></td>
+                <td> <%= user.admin %></td>
+                <td><%= user.created_at %></td>
+                <td> 
+                  <%= link_to "Edit", edit_admin_user_path(user), remote: true, data: {'reveal-id' => "user-modal-#{user.id}", 'reveal-ajax' => true}, class: "button tiny radius"  %>
+                  <%= link_to "Delete", admin_users_path(user), method: :delete, remote: true,  data: {confirm: "Are you sure???" }, class: "button tiny alert radius" %>
+                </td>
+              </tr>
+            <% end %>
+              </tbody>
+            </tr>
+          </thead>
+
+        </table>
+    <%= will_paginate @users, renderer: FoundationPagination::Rails %>
+  </div>
+</div>
