@@ -65,4 +65,12 @@ class Admin::DemotsController < ApplicationController
       format.js
     end
   end
+
+ private
+
+  def demot_params
+    params.require(:demot).permit(:title, :image, :user_id)
+  end
+
+
 end
