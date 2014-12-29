@@ -33,9 +33,9 @@ class Admin::UsersController < ApplicationController
 
   def edit
     @user = User.find_by(id: params[:id])
-    # respond_to do |format|
-    #   format.js
-    # end
+    respond_to do |format|
+      format.js
+    end
   end
 
   def destroy
