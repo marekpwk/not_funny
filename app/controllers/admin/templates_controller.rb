@@ -1,5 +1,6 @@
 class Admin::TemplatesController < ApplicationController
   include ApplicationHelper
+  helper_method :sort_column, :sort_direction
   before_filter :signed_in_user
   before_filter :admin_user
 

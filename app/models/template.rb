@@ -4,7 +4,7 @@ class Template < ActiveRecord::Base
 
   def self.search(query)
     if query
-      where('title ILIKE  ?', "%#{queryi.downcase}%")
+      where('title ILIKE  ?', "%#{query.downcase}%")
     else
       all
     end
