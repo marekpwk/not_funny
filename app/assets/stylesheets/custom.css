@@ -55,6 +55,25 @@ margin: 0px;
   font-size: 1em;
 }
 /* Admin panel */
+table.demots-list{
+  background-color:rgb(79, 79, 79);
+}
+table tr.even, table tr.alt, table.demots-list tr:nth-of-type(even){
+ background-color:#565656;
+}
+table tr.even, table tr.alt, table.demots-list tr{
+  background-color:rgb(95, 95, 95);
+}
+table.demots-list td, table.demots-list thead th{
+ color: #F7EAEA;
+}
+ table.demots-list thead th a{
+  color:#F7EAEA;
+  text-decoration: underline;
+}
+table.demots-list{
+  background-color:rgb(79, 79, 79);
+}
 .users-list li, .demots-list li, .templates-list li{
   list-style-type: none;
   border-bottom: 1px solid #ffffff;
