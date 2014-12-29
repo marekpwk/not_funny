@@ -1,2 +1,3 @@
 $('#user-modal-<%= @user.id %>').foundation('reveal', 'close');
-$('#<%= @user.id %>-user a').first().html('<%= @user.name %>')
+$("#<%= @user.id %>-user td:eq(1)").html('<%= @user.name %>')
+$("#<%= @user.id %>-user td:eq(2)").html('<%= @user.email %>')

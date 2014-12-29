@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   root to: "demots#index"
-  resources :users
+  resources :users, only: [:new, :create, :edit, :show, :update]
   resources :sessions, only: [:new, :create, :destroy, :edit]
   match '/signup', to: 'users#new', via: 'get'
   match '/signin', to: 'sessions#new', via: 'get'

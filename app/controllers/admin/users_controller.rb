@@ -1,10 +1,15 @@
 class Admin::UsersController < ApplicationController
   include ApplicationHelper
+  helper_method :sort_column, :sort_direction
   before_filter :signed_in_user, only: [:index,:edit, :update]
   before_filter :admin_user
 
   def index
-    @users = User.paginate(:page => params[:page])
+    if params[:search]
+      @users = User.search(params[:search]).order(sort_column + "  " +  sort_direction).paginate(:page => params[:page], :per_page => 10)
+    else
+      @users = User.order(sort_column + "  " +  sort_direction).paginate(:page => params[:page], :per_page => 10)
+    end
   end
 
   def new
@@ -29,9 +34,9 @@ class Admin::UsersController < ApplicationController
 
   def edit
     @user = User.find_by(id: params[:id])
-    # respond_to do |format|
-    #   format.js
-    # end
+    respond_to do |format|
+      format.js
+    end
   end
 
   def destroy

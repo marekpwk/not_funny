@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
-  has_many :demots
-  has_many :votes
+  has_many :demots, dependent: :destroy
+  has_many :votes, dependent: :destroy
   before_create :create_remember_token
   before_save { email.downcase! }
 
@@ -21,5 +21,13 @@ class User < ActiveRecord::Base
 
   def create_remember_token
     self.remember_token = User.digest(User.new_remember_token)
+  end
+
+  def self.search(query)
+    if query
+      where('name ILIKE  ?', "%#{query.downcase}%")
+    else
+      all
+    end
   end
 end

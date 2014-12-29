@@ -55,6 +55,29 @@ margin: 0px;
   font-size: 1em;
 }
 /* Admin panel */
+table.admin-list{
+  background-color:rgb(79, 79, 79);
+}
+table tr.even, table tr.alt, table.admin-list tr:nth-of-type(even){
+ background-color:#565656;
+}
+table tr.even, table tr.alt, table.admin-list tr{
+  background-color:rgb(95, 95, 95);
+}
+table.admin-list td, table.admin-list thead th{
+ color: #F7EAEA;
+}
+ table.admin-list thead th a{
+  color:#F7EAEA;
+  text-decoration: underline;
+}
+table.admin-list thead th{
+ background-color:rgb(73, 73, 73);
+}
+table.admin-list{
+  background-color:rgb(79, 79, 79);
+  border-radius: 1%;
+}
 .users-list li, .demots-list li, .templates-list li{
   list-style-type: none;
   border-bottom: 1px solid #ffffff;
@@ -72,6 +95,9 @@ margin: 0px;
 .small-thumb img{
   border: 1px solid #ffffff;
   margin-bottom: 1%;
+}
+input#search{
+  width:80%;
 }
 /***  Admin columns ***/
 

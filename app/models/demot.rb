@@ -9,7 +9,7 @@ class Demot < ActiveRecord::Base
 
   def self.search(query)
     if query
-      where('title LIKE  ?', "%#{query}%")
+      where('title ILIKE  ?', "%#{query.downcase}%")
     else
       all
     end
