@@ -21,6 +21,7 @@ class Admin::TemplatesController < ApplicationController
     if @template.save
       redirect_to admin_templates_path, notice: "Your template has been created"
     else
+      flash.now[:alert] = "Ooops, all fields are required"
       render 'new'
     end
   end
