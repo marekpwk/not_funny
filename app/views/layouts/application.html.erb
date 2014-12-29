@@ -4,12 +4,12 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title><%= content_for?(:title) ? yield(:title) : "Not funny" %></title>
+<title><%= content_for?(:title) ? yield(:title) : "Not Funny" %></title>
 
 <%= stylesheet_link_tag    "application" %>
 <%= javascript_include_tag "vendor/modernizr" %>
-<%= yield(:header) if @content_for_header %>
 <%= csrf_meta_tags %>
+<%= favicon_link_tag '/favicon.ico' %>
 </head>
 
 <body>
