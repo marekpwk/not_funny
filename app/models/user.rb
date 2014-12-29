@@ -22,4 +22,12 @@ class User < ActiveRecord::Base
   def create_remember_token
     self.remember_token = User.digest(User.new_remember_token)
   end
+
+  def self.search(query)
+    if query
+      where('name ILIKE  ?', "%#{query.downcase}%")
+    else
+      all
+    end
+  end
 end
