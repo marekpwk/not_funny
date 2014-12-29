@@ -7,10 +7,10 @@ class Admin::DemotsController < ApplicationController
   # respond_to :html, :js
   def index
     if params[:search]
-    @demots = Demot.search(params[:search]).order(sort_column + "  " +  sort_direction).paginate(:page => params[:page], :per_page => 10)
+      @demots = Demot.search(params[:search]).order(sort_column + "  " +  sort_direction).paginate(:page => params[:page], :per_page => 10)
     else
 
-    @demots = Demot.order(sort_column + "  " +  sort_direction).paginate(:page => params[:page], :per_page => 10)
+      @demots = Demot.order(sort_column + "  " +  sort_direction).paginate(:page => params[:page], :per_page => 10)
     end
   end
 
@@ -65,5 +65,4 @@ class Admin::DemotsController < ApplicationController
       format.js
     end
   end
-
 end

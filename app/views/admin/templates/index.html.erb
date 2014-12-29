@@ -1,33 +1,51 @@
 <div class="row">
-  <div class="small-8 small-centered  large-8  large-centered columns ">
+  <div class="small-8 small-centered columns">
+    <h1>Manage meme templates</h1>
+    <div class="row ">
+      <div class="small-12 large-4 columns">
+        <%= link_to "Create new template", new_admin_template_path, class: "button tiny radius success left" %>
+      </div>
+      <div class="small-12 large-3 columns " >
+        <%= form_tag admin_templates_path, method: :get do %>
+          <%= hidden_field_tag :direction, params[:direction] %>
+        <%= hidden_field_tag :sort, params[:sort] %>
+        <p>
+        <%= text_field_tag :search, params[:search] %>
+        <%= submit_tag "Search by title", :name => nil, class: "button tiny radius" %>
+        </p>
+      <% end %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-12 small-centered  large-12  large-centered columns ">
+        <%= will_paginate @templates, renderer: FoundationPagination::Rails %>
+        <table class="admin-list">
+          <thead>
+            <tr>
+              <th width="100">Id</th>
+              <th widh="150">Image</th>
+              <th widh="150">Title </th>
+              <th widh="150">Author</th>
+              <th widht="200">Created at </th>
+              <th widh="150">Action </th>
+              <tbody>
+              <% @templates.each do |template| %>
+                <tr id="<%= template.id %>-template">
+                <td><%= template.id %></td>
+                <td><%= link_to image_tag(template.image.small_thumb), admin_template_path(template), class: "small-thumb" %></td>
+                <td><%= template.title %></td>
+                <td> <%= template.user.name %></td>
+                <td><%= template.created_at %></td>
+                <td> <%= link_to "Delete", admin_template_path(template), method: :delete, remote: true,  data: {confirm: "Are you sure???" }, class: "button tiny alert radius" %></td>
+              </tr>
+            <% end %>
+              </tbody>
+            </tr>
+          </thead>
 
-    <h1>Manage meme templates</h1><%= link_to "Create new template", new_admin_template_path, class: "button tiny radius success" %>
-  <%= will_paginate @templates, renderer: FoundationPagination::Rails %>
-    <table class="admin-list">
-      <thead>
-        <tr>
-          <th width="100">Id</th>
-          <th widh="150">Image</th>
-          <th widh="150">Title </th>
-          <th widh="150">Author</th>
-          <th widht="200">Created at </th>
-          <th widh="150">Action </th>
-          <tbody>
-          <% @templates.each do |template| %>
-            <tr id="<%= template.id %>-template">
-            <td><%= template.id %></td>
-            <td><%= link_to image_tag(template.image.small_thumb), admin_template_path(template), class: "small-thumb" %></td>
-            <td><%= template.title %></td>
-            <td> <%= template.user.name %></td>
-            <td><%= template.created_at %></td>
-            <td> <%= link_to "Delete", admin_template_path(template), method: :delete, remote: true,  data: {confirm: "Are you sure???" }, class: "button tiny alert radius" %></td>
-          </tr>
-        <% end %>
-          </tbody>
-        </tr>
-      </thead>
-
-    </table>
-    <%= will_paginate @users, renderer: FoundationPagination::Rails %>
+        </table>
+        <%= will_paginate @users, renderer: FoundationPagination::Rails %>
+      </div>
+    </div>
   </div>
 </div>

@@ -96,6 +96,9 @@ table.admin-list{
   border: 1px solid #ffffff;
   margin-bottom: 1%;
 }
+input#search{
+  width:80%;
+}
 /***  Admin columns ***/
 
 

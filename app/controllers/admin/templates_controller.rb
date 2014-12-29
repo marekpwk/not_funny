@@ -1,10 +1,14 @@
 class Admin::TemplatesController < ApplicationController
   include ApplicationHelper
   before_filter :signed_in_user
-  before_filter :admin_user 
+  before_filter :admin_user
 
   def index
-    @templates = Template.paginate(:page => params[:page])
+    if params[:search]
+      @templates = Template.search(params[:search]).order(sort_column + "  " +  sort_direction).paginate(:page => params[:page], :per_page => 10)
+    else
+      @templates = Template.order(sort_column + "  " +  sort_direction).paginate(:page => params[:page], :per_page => 10)
+    end
   end
 
   def new
