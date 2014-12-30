@@ -107,6 +107,8 @@ GEM
     fog-xml (0.1.0)
       fog-core
       nokogiri (~> 1.5, >= 1.5.11)
+    font_assets (0.1.11)
+      rack
     formatador (0.2.5)
     foundation-icons-sass-rails (3.0.0)
       railties (>= 3.1.1)
@@ -255,6 +257,7 @@ DEPENDENCIES
   factory_girl_rails
   faker
   fog
+  font_assets
   foundation-icons-sass-rails (~> 3.0.0)
   foundation-rails
   jbuilder (~> 2.0)
