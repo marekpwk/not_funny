@@ -82,5 +82,5 @@ Rails.application.configure do
   #activate the Rack middleware to secure your Twilio webhook routes
   config.middleware.use Rack::TwilioWebhookAuthentication, Rails.application.secrets.twilio_auth_token, '/voice'
   config.action_controller.asset_host = "d34q1ag0jbjg8y.cloudfront.net"
-  config.font_assets.origin = "d34q1ag0jbjg8y.cloudfront.net"
+  config.font_assets.origin = "http://notfunny.herokuapp.com"
 end
