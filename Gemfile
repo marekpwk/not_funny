@@ -48,6 +48,8 @@ group :test do
 end
 gem 'rails_12factor', group: :production
 gem 'mini_magick'
+#Solve problem with using custom fonts with cloudfront
+gem 'font_assets'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

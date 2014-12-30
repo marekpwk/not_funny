@@ -23,6 +23,7 @@ CarrierWave.configure do |config|
     end
 
   elsif Rails.env.production?
+    config.asset_host = ENV['CARRIER_ASSET_HOST']
     config.storage :fog
     config.fog_credentials = {
       :provider => 'AWS',

@@ -81,4 +81,6 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
   #activate the Rack middleware to secure your Twilio webhook routes
   config.middleware.use Rack::TwilioWebhookAuthentication, Rails.application.secrets.twilio_auth_token, '/voice'
+  config.action_controller.asset_host = ENV['ASSET_HOST']
+  config.font_assets.origin = ENV['DOMAIN']
 end
