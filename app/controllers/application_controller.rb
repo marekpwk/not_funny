@@ -7,9 +7,9 @@ class ApplicationController < ActionController::Base
   private
 
 
-  def sort_column
+  def sort_column(default="id")
     class_name = controller_name.classify.constantize
-    class_name.column_names.include?(params[:sort]) ? params[:sort] : "id"
+    class_name.column_names.include?(params[:sort]) ? params[:sort] : default
   end
 
   def sort_direction
