@@ -1,3 +1,4 @@
+require 'twilio-ruby'
 class Admin::DemotsController < ApplicationController
   include ApplicationHelper
   require 'will_paginate/array'
@@ -68,21 +69,34 @@ class Admin::DemotsController < ApplicationController
   def approve
     # binding.pry
     @demot = Demot.find(params[:id])
+    message = ""
     if @demot.approved
+      message = "Your meme has been approved :)"
       @demot.approved = false
     else
+      message = "Sorry, but your meme has not been approved :("
       @demot.approved = true
     end
+
     @demot.save
+    if @demot.mms
+      # binding.pry
+      account_sid = ENV['TWILIO_ACCOUNT_SID']
+      auth_token = ENV['TWILIO_AUTH_TOKEN']
+      @client = Twilio::REST::Client.new account_sid, auth_token
+      @client.account.sms.messages.create(:body => "Your meme has been approved.",
+                                          :to => ENV['MY_NUMBER'],
+                                          :from => ENV['TWILIO_NUMBER'])# In trial account you can only send messages to verified phone number
+    end
+
     respond_to do |format|
       format.js
     end
   end
- private
+
+  private
 
   def demot_params
     params.require(:demot).permit(:title, :image, :user_id)
   end
-
-
 end
