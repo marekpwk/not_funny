@@ -1,0 +1,10 @@
+var button = $("#<%= @demot.id%>-button");
+console.log("ok")
+if ( button.html() === "Disapprove" ){
+  button.html("Approve");
+  button.removeClass("info").addClass("success");
+ }
+else{
+  button.html("Disapprove");
+  button.removeClass("success").addClass("info");
+}

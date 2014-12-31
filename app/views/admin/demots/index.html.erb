@@ -39,9 +39,9 @@
             <td> 
               <%= link_to "Delete", admin_demot_path(demot), method: :delete, remote: true,  data: {confirm: "Are you sure???" }, class: "button tiny alert radius" %>
               <% if demot.approved %>
-                <%= link_to "Disaprrove", approve_admin_demot_path(demot), method: :put, remote: true, class: "button tiny alert radius" %>
+                <%= link_to "Disapprove", approve_admin_demot_path(demot), method: :put, remote: true, class: "button tiny radius info" , id: "#{demot.id}-button" %>
               <% else %> 
-                <%= link_to "Approve", approve_admin_demot_path(demot), method: :put, remote: true, class: "button tiny success radius" %>
+                <%= link_to "Approve", approve_admin_demot_path(demot), method: :put, remote: true, class: "button tiny radius success", id: "#{demot.id}-button"%>
               <% end %>  
             </td>
           </tr>
