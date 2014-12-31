@@ -20,7 +20,11 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
   namespace :admin do
     match '', to: 'dashboard#index', via: 'get'
-    resources :demots
+    resources :demots do
+      member do
+       put :approve
+      end
+    end
     resources :users
     resources :templates
   end
