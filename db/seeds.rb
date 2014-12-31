@@ -16,10 +16,21 @@ puts "Starting to seed users..."
 end
 
 themes = %w{sports city food nature cats technics transport business}
-puts "Starting to seed images..."
+puts "Done with users,  starting to seed images..."
 demots = []
 images_height = %w{300 400 500 600 800}
 100.times do |i|
+  url = "http://lorempixel.com/650/"
+  url << images_height.sample << "/"
+  title = Faker::Company.catch_phrase
+  user = users.sample
+  demot = Demot.new(title: title, user: user, approved: true)
+  image_url = url << themes.sample
+  demot.remote_image_url = image_url
+  demots << demot
+  demot.save
+end
+5.times do |i|
   url = "http://lorempixel.com/650/"
   url << images_height.sample << "/"
   title = Faker::Company.catch_phrase
