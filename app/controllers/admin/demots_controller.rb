@@ -2,7 +2,7 @@ class Admin::DemotsController < ApplicationController
   include ApplicationHelper
   require 'will_paginate/array'
   helper_method :sort_column, :sort_direction
-  before_filter :signed_in_user, only: [:new, :create, :up, :down]
+  before_filter :signed_in_user, only: [:new, :create, :up, :down, :destroy]
   before_filter :admin_user
   # respond_to :html, :js
   def index
@@ -65,6 +65,19 @@ class Admin::DemotsController < ApplicationController
     end
   end
 
+  def approve
+    # binding.pry
+    @demot = Demot.find(params[:id])
+    if @demot.approved
+      @demot.approved = false
+    else
+      @demot.approved = true
+    end
+    @demot.save
+    respond_to do |format|
+      format.js
+    end
+  end
  private
 
   def demot_params

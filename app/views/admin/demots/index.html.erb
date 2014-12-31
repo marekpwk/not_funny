@@ -19,10 +19,11 @@
       <thead>
         <tr>
           <th width="100"><%= sortable("id") %></th>
-          <th widh="150">Image</th>
+          <th widh="100">Image</th>
           <th widh="150"><%= sortable("title") %> </th>
           <th widh="150"><%= sortable("user_id", "Author") %> </th>
           <th widh="150"><%= sortable("total_votes", "Votes") %> </th>
+          <th widh="50"><%= sortable("approved") %> </th>
           <th widht="200"><%= sortable("created_at", "Created at") %> </th>
           <th widh="150">Action </th>
           <tbody>
@@ -33,8 +34,16 @@
             <td><%= demot.title %></td>
            <td> <%= demot.user.name %></td>
             <td><%= demot.total_votes %></td>
+            <td><%= demot.approved %></td>
             <td><%= demot.created_at %></td>
-            <td> <%= link_to "Delete", admin_demot_path(demot), method: :delete, remote: true,  data: {confirm: "Are you sure???" }, class: "button tiny alert radius" %></td>
+            <td> 
+              <%= link_to "Delete", admin_demot_path(demot), method: :delete, remote: true,  data: {confirm: "Are you sure???" }, class: "button tiny alert radius" %>
+              <% if demot.approved %>
+                <%= link_to "Disaprrove", approve_admin_demot_path(demot), method: :put, remote: true, class: "button tiny alert radius" %>
+              <% else %> 
+                <%= link_to "Approve", approve_admin_demot_path(demot), method: :put, remote: true, class: "button tiny success radius" %>
+              <% end %>  
+            </td>
           </tr>
         <% end %>
           </tbody>
