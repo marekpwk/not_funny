@@ -1,9 +1,9 @@
 class DemotsController < ApplicationController
   require 'will_paginate/array'
   before_filter :signed_in_user, only: [:new, :create, :up, :down]
-  # respond_to :html, :js
+ 
   def index
-    @demots = Demot.order(created_at: :desc).paginate(:page => params[:page], :per_page => 10)
+    @demots = Demot.order(updated_at: :desc).where(approved: true).paginate(:page => params[:page], :per_page => 10)
     respond_to do |format|
       format.html
       format.js
@@ -15,9 +15,7 @@ class DemotsController < ApplicationController
   end
 
   def create
-    # binding.pry
     @demot = Demot.new(demot_params)
-    # binding.pry
     if @demot.save
       redirect_to demots_path, notice: "Your demot has been created"
     else
@@ -63,7 +61,7 @@ class DemotsController < ApplicationController
   end
 
   def top
-    @demots = Demot.order(total_votes: :desc).first(50).paginate(:page => params[:page], :per_page => 10)
+    @demots = Demot.order(total_votes: :desc).where(approved: true).first(50).paginate(:page => params[:page], :per_page => 10)
     render 'index'
   end
 
