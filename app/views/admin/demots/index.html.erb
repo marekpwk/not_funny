@@ -1,4 +1,4 @@
-<h1>Manage demotivators and memes</h1>
+<h1 class="text-center">MEMES PANEL</h1>
 <div class="row">
   <div class="small-3  columns">
     <%= form_tag admin_demots_path, method: :get do %>
@@ -13,8 +13,11 @@
 </div>
 <div class="row">
   <div class="small-12 small-centered  large-12  large-centered columns ">
-    <%= will_paginate @demots, renderer: FoundationPagination::Rails %>
-
+    <div class="row">
+      <div class="small-12 small-centered large-7 large-centered columns">
+        <%= will_paginate @demots, renderer: FoundationPagination::Rails %>
+      </div>
+    </div>
     <table class="admin-list">
       <thead>
         <tr>
@@ -32,17 +35,17 @@
             <td><%= demot.id %></td>
             <td><%= link_to image_tag(demot.image.small_thumb), demot_path(demot), class: "small-thumb" %></td>
             <td><%= demot.title %></td>
-           <td> <%= demot.user.name %></td>
+            <td> <%= demot.user.name %></td>
             <td><%= demot.total_votes %></td>
             <td><%= demot.approved %></td>
             <td><%= demot.created_at %></td>
-            <td> 
+            <td>
               <%= link_to "Delete", admin_demot_path(demot), method: :delete, remote: true,  data: {confirm: "Are you sure???" }, class: "button tiny alert radius" %>
               <% if demot.approved %>
                 <%= link_to "Disapprove", approve_admin_demot_path(demot), method: :put, remote: true, class: "button tiny radius info" , id: "#{demot.id}-button" %>
-              <% else %> 
-                <%= link_to "Approve", approve_admin_demot_path(demot), method: :put, remote: true, class: "button tiny radius success", id: "#{demot.id}-button"%>
-              <% end %>  
+            <% else %>
+                <%= link_to "Approve", approve_admin_demot_path(demot), method: :put, remote: true, class: "button tiny radius success", id: "#{demot.id}-button" %>
+            <% end %>
             </td>
           </tr>
         <% end %>
@@ -51,6 +54,10 @@
       </thead>
 
     </table>
-    <%= will_paginate @demots, renderer: FoundationPagination::Rails %>
+    <div class="row">
+      <div class="small-12 small-centered large-7 large-centered columns">
+        <%= will_paginate @demots, renderer: FoundationPagination::Rails %>
+      </div>
+    </div>
   </div>
 </div>
