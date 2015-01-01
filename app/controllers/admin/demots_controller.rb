@@ -70,12 +70,12 @@ class Admin::DemotsController < ApplicationController
     # binding.pry
     @demot = Demot.find(params[:id])
     message = ""
-    if @demot.approved
+    if @demot.approved == false
       message = "Your meme has been approved :)"
-      @demot.approved = false
+      @demot.approved = true
     else
       message = "Sorry, but your meme has not been approved :("
-      @demot.approved = true
+      @demot.approved = false
     end
 
     @demot.save
