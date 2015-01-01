@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141231012814) do
+ActiveRecord::Schema.define(version: 20141231205820) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,8 @@ ActiveRecord::Schema.define(version: 20141231012814) do
     t.string   "type"
     t.integer  "total_votes", default: 0
     t.boolean  "approved",    default: false
+    t.boolean  "mms",         default: false
+    t.string   "phone"
   end
 
   create_table "templates", force: true do |t|
