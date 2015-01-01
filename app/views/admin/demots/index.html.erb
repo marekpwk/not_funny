@@ -27,6 +27,7 @@
           <th widh="150"><%= sortable("user_id", "Author") %> </th>
           <th widh="150"><%= sortable("total_votes", "Votes") %> </th>
           <th widh="50"><%= sortable("approved") %> </th>
+          <th widh="50"><%= sortable("mms") %> </th>
           <th widht="200"><%= sortable("created_at", "Created at") %> </th>
           <th widh="150">Action </th>
           <tbody>
@@ -38,6 +39,7 @@
             <td> <%= demot.user.name %></td>
             <td><%= demot.total_votes %></td>
             <td><%= demot.approved %></td>
+            <td><%= demot.mms %></td>
             <td><%= demot.created_at %></td>
             <td>
               <%= link_to "Delete", admin_demot_path(demot), method: :delete, remote: true,  data: {confirm: "Are you sure???" }, class: "button tiny alert radius" %>
