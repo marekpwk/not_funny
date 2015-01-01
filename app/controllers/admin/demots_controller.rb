@@ -84,7 +84,7 @@ class Admin::DemotsController < ApplicationController
       account_sid = ENV['TWILIO_ACCOUNT_SID']
       auth_token = ENV['TWILIO_AUTH_TOKEN']
       @client = Twilio::REST::Client.new account_sid, auth_token
-      @client.account.sms.messages.create(:body => "Your meme has been approved.",
+      @client.account.sms.messages.create(:body => message,
                                           :to => ENV['MY_NUMBER'],
                                           :from => ENV['TWILIO_NUMBER'])# In trial account you can only send messages to verified phone number
     end
