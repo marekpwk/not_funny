@@ -99,6 +99,27 @@ table.admin-list{
 input#search{
   width:80%;
 }
+/*** Single view ***/
+.left-arrow{
+ font-size: 4em;
+ position: absolute;
+ top: 40%;
+ left: 14%;
+}
+
+.right-arrow{
+ font-size: 4em;
+ position: absolute;
+ top: 40%;
+ right: 14%;
+}
+.left-arrow a, .right-arrow a{
+  color: rgb(160, 160, 160);
+}
+
+.left-arrow a:hover, .right-arrow a:hover{
+  color: rgb(218, 214, 214);
+}
 /***  Admin columns ***/
 
 
