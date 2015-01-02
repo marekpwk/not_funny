@@ -32,10 +32,7 @@
 nav.top-bar{
  background-color: #242222;
 }
-nav .top-bar-section li:not(.has-form) a:not(.button){
- background-color: #242222;
- font-weight: bold;
-}
+
 .meme-nav{
  border-bottom: 2px rgba(255, 39, 0, 0.90) solid;
 }
