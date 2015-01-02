@@ -4,6 +4,7 @@
 .main-container{
   background-color: #121212 ;
   min-height: 100%;
+  padding-top: 0.5%;
 }
 .demots-column{
   background-color: #1D1B1B;
@@ -24,9 +25,24 @@
 .demots-main ul.pagination{
   margin-left:50px;
 }
+/* navigation */
+.meme-nav .top-bar .name h1 a {
+ font-weight: bold;
+}
+nav.top-bar{
+ background-color: #242222;
+}
+nav .top-bar-section li:not(.has-form) a:not(.button){
+ background-color: #242222;
+ font-weight: bold;
+}
+.meme-nav{
+ background-color: red;
+ border-bottom: 2px rgba(255, 39, 0, 0.66) solid;
+}
 /* form errors */
 .alert-form {
-  color: #E21A1A;
+ background- color: #242222;
 }
 .alert-form li{
   list-style-type: none;

@@ -1428,10 +1428,11 @@ $header-font-family: $open-sans;
 // $topbar-link-font-size: rem-calc(13);
 // $topbar-link-hover-lightness: -10%; // Darken by 10%
 // $topbar-link-bg: $topbar-bg;
-// $topbar-link-bg-color-hover: $charcoal;
-// $topbar-link-bg-hover: #272727;
-// $topbar-link-bg-active: $primary-color;
-// $topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -14%);
+// $topbar-link-bg-color-hover: red;
+$meme-menu-bg: #423F3F;
+$topbar-link-bg-hover: $meme-menu-bg;
+$topbar-link-bg-active: $meme-menu-bg;
+$topbar-link-bg-active-hover: scale-color($meme-menu-bg, $lightness: -14%);
 // $topbar-link-font-family: $body-font-family;
 // $topbar-link-text-transform: none;
 // $topbar-link-padding: $topbar-height / 3;
