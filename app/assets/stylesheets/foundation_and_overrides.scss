@@ -158,7 +158,7 @@ $body-font-family: $roboto;
 $small-range: (0em, 40em);
 // $medium-range: (40.063em, 64em);
 $large-range: (64.063em, 90em);
-// $xlarge-range: (90.063em, 120em);
+$xlarge-range: (90.063em, 120em);
 // $xxlarge-range: (120.063em, 99999999em);
 
 $screen: "only screen";
@@ -176,7 +176,7 @@ $small-only: "#{$screen} and (max-width: #{upper-bound($small-range)})";
 $large-only: "#{$screen} and (min-width:#{lower-bound($large-range)}) and (max-width:#{upper-bound($large-range)})";
 
 // $xlarge-up: "#{$screen} and (min-width:#{lower-bound($xlarge-range)})";
-// $xlarge-only: "#{$screen} and (min-width:#{lower-bound($xlarge-range)}) and (max-width:#{upper-bound($xlarge-range)})";
+$xlarge-only: "#{$screen} and (min-width:#{lower-bound($xlarge-range)}) and (max-width:#{upper-bound($xlarge-range)})";
 
 // $xxlarge-up: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)})";
 // $xxlarge-only: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (max-width:#{upper-bound($xxlarge-range)})";
@@ -203,6 +203,14 @@ $large-only: "#{$screen} and (min-width:#{lower-bound($large-range)}) and (max-w
   }
   #demots-wrapper .meme_header h3 {
     margin-left: 2.5%;
+  }
+}
+@media #{$xlarge-only}{
+  .meme_header h3 {
+    margin-left: 1%;
+  }
+  #demots-wrapper .meme_header h3 {
+    margin-left: 2%;
   }
 }
 // e. Typography
