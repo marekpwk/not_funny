@@ -14,6 +14,10 @@ class DemotsController < ApplicationController
     @demot = Demot.new
   end
 
+  def show
+    @demot = Demot.find(params[:id])
+  end
+
   def create
     @demot = Demot.new(demot_params)
     if @demot.save
