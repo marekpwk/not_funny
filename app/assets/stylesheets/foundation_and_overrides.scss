@@ -196,6 +196,20 @@ $xlarge-only: "#{$screen} and (min-width:#{lower-bound($xlarge-range)}) and (max
   .sharing-container span{
     display: none;
   }
+
+.left-arrow{
+ font-size: 4em;
+ position: absolute;
+ top: 30%;
+ left: 1%;
+}
+
+.right-arrow{
+ font-size: 4em;
+ position: absolute;
+ top: 30%;
+ right: 1%;
+}
 }
 @media #{$large-only}{
   .meme_header h3 {
