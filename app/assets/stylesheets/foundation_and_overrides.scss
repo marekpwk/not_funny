@@ -198,8 +198,11 @@ $large-only: "#{$screen} and (min-width:#{lower-bound($large-range)}) and (max-w
   }
 }
 @media #{$large-only}{
-  .meme_header h3{
+  .meme_header h3 {
     margin-left: 1%;
+  }
+  #demots-wrapper .meme_header h3 {
+    margin-left: 2.5%;
   }
 }
 // e. Typography
