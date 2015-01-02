@@ -1,12 +1,12 @@
 .main p,.main h3, .main h2,.main h1,.main label {
   color: #F7EAEA;
 }
-.main-container{
+.main-container {
   background-color: #121212 ;
   min-height: 100%;
   padding-top: 0.5%;
 }
-.demots-column{
+.demots-column {
   background-color: #1D1B1B;
   padding-bottom: 2%;
   padding-top: 2%;
@@ -14,124 +14,131 @@
   border-radius: 1%;
   margin-bottom: 1em;
 }
-.demots-column img{
-   display: block;
+.demots-column img {
+  display: block;
   max-width: 100%;
   margin: 0 auto;
 }
-.demots-column h3{
+.demots-column h3 {
   color: #EEEEEE;
 }
-.demots-main ul.pagination{
-  margin-left:50px;
-}
-/* navigation */
-.meme-nav .top-bar .name h1 a {
- font-weight: bold;
-}
-nav.top-bar{
- background-color: #242222;
+.demots-main ul.pagination {
+  margin-left: 50px;
 }
 
-.meme-nav{
- border-bottom: 2px rgba(255, 39, 0, 0.90) solid;
+/* navigation */
+.meme-nav .top-bar .name h1 a {
+  font-weight: bold;
 }
+nav.top-bar {
+  background-color: #242222;
+}
+.meme-nav .top-bar-section li:not(.has-form) a:not(.button) {
+  background: #242222;
+}
+.meme-nav {
+  border-bottom: 2px rgba(255, 39, 0, 0.90) solid;
+}
+
 /* form errors */
 .alert-form {
- background-color: #242222;
+  background-color: #242222;
 }
-.alert-form li{
+.alert-form li {
   list-style-type: none;
 }
-.fi-arrow-up, .fi-arrow-down{
-font-size:2.5em;
-margin: 0px;
+.fi-arrow-up, .fi-arrow-down {
+  font-size: 2.5em;
+  margin: 0px;
 }
 .arrows {
   margin-left: 5%;
 }
-.fi-arrow-down{
+.fi-arrow-down {
   padding: 2%;
-  color:#D50529;
+  color: #D50529;
 }
-.fi-arrow-up{
+.fi-arrow-up {
   margin-right: 15%;
   padding: 0 2% 0 2%; ;
-  color:#009D23;
+  color: #009D23;
 }
-.votes{
- margin: 2% 0 0 7%;
+.votes {
+  margin: 2% 0 0 7%;
 }
-.demots-column p{
+.demots-column p {
   display: inline;
   font-size: 1em;
 }
+
 /* Admin panel */
-table.admin-list{
-  background-color:rgb(79, 79, 79);
+table.admin-list {
+  background-color: rgb(79, 79, 79);
 }
 table tr.even, table tr.alt, table.admin-list tr:nth-of-type(even){
- background-color:#565656;
+  background-color: #565656;
 }
-table tr.even, table tr.alt, table.admin-list tr{
-  background-color:rgb(95, 95, 95);
+table tr.even, table tr.alt, table.admin-list tr {
+  background-color: rgb(95, 95, 95);
 }
-table.admin-list td, table.admin-list thead th{
- color: #F7EAEA;
+table.admin-list td, table.admin-list thead th {
+  color: #F7EAEA;
 }
- table.admin-list thead th a{
-  color:#F7EAEA;
+table.admin-list thead th a {
+  color: #F7EAEA;
   text-decoration: underline;
 }
-table.admin-list thead th{
- background-color:rgb(73, 73, 73);
+table.admin-list thead th {
+  background-color: rgb(73, 73, 73);
 }
-table.admin-list{
-  background-color:rgb(79, 79, 79);
+table.admin-list {
+  background-color: rgb(79, 79, 79);
   border-radius: 1%;
 }
-.users-list li, .demots-list li, .templates-list li{
+.users-list li, .demots-list li, .templates-list li {
   list-style-type: none;
   border-bottom: 1px solid #ffffff;
   margin-bottom: 2%;
 }
-.user-name a{
- color: #ffffff
+.user-name a {
+  color: #ffffff
 }
-.admin-panel li{
+.admin-panel li {
   list-style-type: none;
 }
-.admin-panel a{
- color: #ffffff
+.admin-panel a {
+  color: #ffffff
 }
-.small-thumb img{
+.small-thumb img {
   border: 1px solid #ffffff;
   margin-bottom: 1%;
 }
-input#search{
-  width:80%;
-}
-/*** Single view ***/
-.left-arrow{
- font-size: 4em;
- position: absolute;
- top: 40%;
- left: 14%;
+input#search {
+  width: 80%;
 }
 
-.right-arrow{
- font-size: 4em;
- position: absolute;
- top: 40%;
- right: 14%;
+/*** Single view ***/
+.left-arrow {
+  font-size: 4em;
+  position: absolute;
+  top: 40%;
+  left: 14%;
 }
-.left-arrow a, .right-arrow a{
+
+.right-arrow {
+  font-size: 4em;
+  position: absolute;
+  top: 40%;
+  right: 14%;
+}
+.left-arrow a, .right-arrow a {
   color: rgb(160, 160, 160);
 }
 
-.left-arrow a:hover, .right-arrow a:hover{
+.left-arrow a:hover, .right-arrow a:hover {
   color: rgb(218, 214, 214);
 }
+
 /***  Admin columns ***/
 
 
@@ -139,13 +146,13 @@ input#search{
 i.fi-social-twitter, i.fi-social-facebook {
   font-size: 1.4em;
 }
-.button.face{
-  background-color:#3a5795;
+.button.face {
+  background-color: #3a5795;
 }
-.button.sharing-buttons.small{
+.button.sharing-buttons.small {
   padding-top: 0.4em;
   padding-bottom: 0.4em;
 }
-.button.sharing-buttons span{
+.button.sharing-buttons span {
   font-size: 1.2em;
-}  
+}
