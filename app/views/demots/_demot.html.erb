@@ -5,7 +5,7 @@
       <h3> <%= demot.title %></h3>
     </div>
     <div class="small-12 small-centered columns">
-      <%= image_tag(demot.image) %>
+      <%= link_to image_tag(demot.image), demot_path(demot) %>
     </div>
   </div>
 

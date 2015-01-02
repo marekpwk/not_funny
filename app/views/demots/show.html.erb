@@ -1,7 +1,7 @@
 <div class="single-meme-view">
   <%= render partial: "demot", locals: {demot: @demot} %>
   <div class="left-arrow">
-    <%= link_to "❰", Demot.exists?(@demot.id-1)? demot_path(@demot.id - 1) : "#"%>
+    <%= link_to "❰", Demot.exists?(@demot.id - 1)? demot_path(@demot.id - 1) : "#"%>
   </div>
   <div class="right-arrow">
     <%= link_to "❯", Demot.exists?(@demot.id + 1)? demot_path(@demot.id + 1) : "#"%>
