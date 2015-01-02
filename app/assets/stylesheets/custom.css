@@ -37,8 +37,7 @@ nav .top-bar-section li:not(.has-form) a:not(.button){
  font-weight: bold;
 }
 .meme-nav{
- background-color: red;
- border-bottom: 2px rgba(255, 39, 0, 0.66) solid;
+ border-bottom: 2px rgba(255, 39, 0, 0.90) solid;
 }
 /* form errors */
 .alert-form {
