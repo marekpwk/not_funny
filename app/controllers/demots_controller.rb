@@ -66,6 +66,7 @@ class DemotsController < ApplicationController
 
   def top
     @demots = Demot.order(total_votes: :desc).where(approved: true).first(50).paginate(:page => params[:page], :per_page => 10)
+    @title = "Top Memes"
     render 'index'
   end
 
