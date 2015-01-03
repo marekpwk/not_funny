@@ -10,4 +10,8 @@ module ApplicationHelper
     direction = column == sort_column && sort_direction == "asc" ? "desc" : "asc"
     link_to title, params.merge(:sort => column, :direction => direction, :page => nil)
   end
+
+  def title(page_title)
+    content_for(:title) { page_title }
+  end
 end
