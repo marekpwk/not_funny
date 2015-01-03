@@ -30,10 +30,14 @@
 .meme-nav .top-bar .name h1 a {
   font-weight: bold;
 }
+.top-bar-section ul li>a {
+  font-weight: bold;
+}
 nav.top-bar {
   background-color: #242222;
 }
 .meme-nav .top-bar-section li:not(.has-form) a:not(.button) {
+  font-weight: bold;
   background: #242222;
 }
 .meme-nav {
