@@ -1,20 +1,25 @@
-<div class="small-6 columns">
-  <h1>Sign up</h1>
-  <%= form_for(@user) do |f| %>
-    <%= render 'shared/error_messages' %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+<% title "Sign Up" %>
+<div class="radius small-12 small-centered  large-8  large-centered medium-8 medium-centered columns demots-column" id="signup-page">
+  <div class="row">
+    <div class="small-12 columns">
+      <h1>Sign up</h1>
+      <%= form_for(@user) do |f| %>
+        <%= render 'shared/error_messages' %>
+      <%= f.label :name %>
+      <%= f.text_field :name, class: "radius" %>
 
-  <%= f.label :email %>
-  <%= f.text_field :email %>
+      <%= f.label :email %>
+      <%= f.text_field :email, class: "radius" %>
 
-  <%= f.label :password %>
-  <%= f.text_field :password %>
+      <%= f.label :password %>
+      <%= f.text_field :password, class: "radius" %>
 
-  <%= f.label :password_confirmation, "Confirmation" %>
-  <%= f.text_field :password_confirmation %>
+      <%= f.label :password_confirmation, "Confirmation", class: "radius" %>
+      <%= f.text_field :password_confirmation, class: "radius" %>
 
-  <%= f.submit "Create my account", :class => "button small radius" %>
+      <%= f.submit "Create my account", :class => "button small radius" %>
 
-<% end %>
+    <% end %>
+    </div>
+  </div>
 </div>
