@@ -4,8 +4,8 @@
     <div class="small-12 columns">
       <%= form_for @demot, html: { multipart: true } do |f| %>
         <%= f.hidden_field :user_id, :value => current_user.id %>
-      <%= f.label :title %>
-      <%= f.text_field :title, class: "radius" %>
+        <%= f.label :title %>
+      <%= f.text_field :title, :placeholder => "e.g. Ruby is awesome!!!", class: "radius" %>
       <%= f.label :image %>
       <%= f.file_field :image %>
       <%= f.submit "Upload", class: "button radius small", id: "upload" %>
