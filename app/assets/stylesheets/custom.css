@@ -88,6 +88,25 @@ input[type="text"]{
 #create-meme .second-shade{
   background-color: #943221;
 }
+.button.twitter{
+  background-color: #00aced;
+}
+.button.twitter:link, .button.twitter:active{
+  background-color:#5FB6D7; 
+}
+.button.twitter:hover{
+  background-color:#08B2F2; 
+}
+
+.button.facebook{
+  background-color: #3a5795;
+}
+.button.facebook:link, .button.facebook:active{
+  background-color:#3a5795; 
+}
+.button.facebook:hover{
+  background-color:#4D71BE;
+}
 /* Admin panel */
 table.admin-list {
   background-color: rgb(79, 79, 79);
@@ -163,9 +182,9 @@ input#search {
 i.fi-social-twitter, i.fi-social-facebook {
   font-size: 1.4em;
 }
-.button.face {
-  background-color: #3a5795;
-}
+/* .button.face { */
+/*   background-color: #3a5795; */
+/* } */
 .button.sharing-buttons.small {
   padding-top: 0.4em;
   padding-bottom: 0.4em;
