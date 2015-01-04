@@ -1,20 +1,24 @@
 <% title "Sign In" %>
-<div class="row">
-  <div class="small-6 columns">
-    <h1>Sign in</h1>
+<div class="radius small-12 small-centered  large-8  large-centered medium-8 medium-centered columns demots-column" id="signin-page">
+  <div class="row">
+    <div class="small-12 columns">
+      <h1>Sign In</h1>
 
-    <%= form_for(:session, url: sessions_path) do |f| %>
+      <%= form_for(:session, url: sessions_path) do |f| %>
       <%= f.label :email %>
-    <%= f.text_field :email %>
-    <%= f.label :password %>
-    <%= f.text_field :password %>
+      <%= f.text_field :email, class: "radius" %>
+      <%= f.label :password %>
+      <%= f.password_field :password, class: "radius" %>
 
-    <%= f.submit "Sign in", :class => "button small radius" %>
+      <%= f.submit "Sign In", :class => "button small radius" %>
 
-  <% end %>
-  </div>
-  <div class="small-4 columns">
-    <h2>Or register</h2>
-    <%= link_to "Register", new_user_path, :class=> "button small radius" %>
+    <% end %>
+    </div>
+    <div class="small-12 columns" id="create-text">
+      <p>Or register</p>
+    </div>
+    <div class="small-12 columns">
+      <%= link_to "Register", signup_path, :class=> "button small radius second-shade" %>
+    </div>
   </div>
 </div>

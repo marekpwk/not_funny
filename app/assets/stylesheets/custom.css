@@ -85,8 +85,14 @@ input[type="text"]{
 #upload{
  width: 100%;
 }
-#create-meme .second-shade{
+#create-meme .second-shade, #signin-page .second-shade, #signup-page .button{
   background-color: #943221;
+  margin-bottom: 0;
+  margin-top: 1%;
+}
+#signup-page .button{
+  margin-bottom: 0;
+  margin-top: 1%;
 }
 .button.twitter{
   background-color: #00aced;
