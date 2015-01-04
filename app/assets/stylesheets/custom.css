@@ -91,13 +91,16 @@ input[type="text"]{
 .button.twitter{
   background-color: #00aced;
 }
-.button.twitter:link, .button.twitter:active{
-  background-color:#5FB6D7; 
+.button.twitter:link, .button.twitter:active, .button.twitter:focus{
+  background-color:#00aced; 
 }
 .button.twitter:hover{
-  background-color:#08B2F2; 
+  background-color:#68D5FF; 
 }
 
+.button.twitter:active{
+  background-color:#00aced; 
+}
 .button.facebook{
   background-color: #3a5795;
 }
