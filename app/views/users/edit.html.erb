@@ -1,19 +1,22 @@
-<h2>Update your profile</h2>
+<% title "Profile" %>
+<div class="radius small-12 small-centered  large-8  large-centered medium-8 medium-centered columns demots-column" id="create-meme">
+  <h2>Update your profile</h2>
 
-<%= form_for(@user) do |f| %>
-  <%= render 'shared/error_messages'%>
+  <%= form_for(@user) do |f| %>
+    <%= render 'shared/error_messages' %>
   <%= f.label :name %>
- <%= f.text_field :name %>
-  
- <%= f.label :email%>
- <%= f.text_field :email %>
- 
- <%= f.label :password %>
- <%= f.text_field :password %>
+  <%= f.text_field :name, class: "radius" %>
 
- <%= f.label :password_confirmation, "Password confirmation" %>
- <%= f.text_field :password_confirmation %>
+  <%= f.label :email %>
+  <%= f.text_field :email, class: "radius"%>
 
- <%= f.submit "Save changes", class: "small button success radius" %>
- 
+  <%= f.label :password %>
+  <%= f.text_field :password, class: "radius"   %>
+
+  <%= f.label :password_confirmation, "Password confirmation", class: "radius" %>
+  <%= f.text_field :password_confirmation, class: "radius" %>
+
+  <%= f.submit "Save changes", class: "small button success radius" %>
+
 <% end %>
+</div>

@@ -18,7 +18,7 @@
           <% if current_user.admin? %>
           <li class="<%= 'active' if current_page?(admin_path)%>"><%= link_to "ADMIN PANEL", admin_path %></li>
       <% end %>
-        <li class="<%= 'active' if current_page?(edit_user_path(current_user)) %>"> <%= link_to "PROFILE", current_user %></li>
+        <li class="<%= 'active' if current_page?(edit_user_path(current_user)) %>"> <%= link_to "PROFILE", edit_user_path(current_user) %></li>
         <li><%= link_to "SIGN OUT", signout_path, method: "delete" %></li>
       <% else %>
 
