@@ -224,7 +224,7 @@ $xlarge-only: "#{$screen} and (min-width:#{lower-bound($xlarge-range)}) and (max
     margin-left: 1%;
   }
   #demots-wrapper .meme_header h3 {
-    margin-left: 2%;
+    margin-left: 2.5%;
   }
 }
 // e. Typography
@@ -485,7 +485,8 @@ $header-font-family: $open-sans;
 // We use these to control button border and hover styles.
 // $button-border-width: 0px;
 // $button-border-style: solid;
-// $button-bg-color: $primary-color;
+$button-color: #CD280B;
+$button-bg-color: $button-color;
 // $button-bg-hover: scale-color($button-bg-color, $lightness: $button-function-factor);
 // $button-border-color: $button-bg-hover;
 // $secondary-button-bg-hover: scale-color($secondary-color, $lightness: $button-function-factor);

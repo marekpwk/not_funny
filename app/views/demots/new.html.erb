@@ -1,17 +1,22 @@
-<% title "Create your own meme :)"%>
-<div class="row">
-  <div class="small-6 columns">
-    <%= form_for @demot, html: { multipart: true } do |f| %>
-    <%= f.hidden_field :user_id, :value => current_user.id %>
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-    <%= f.label :image %>
-    <%= f.file_field :image %>
-    <%= f.submit "Upload", class: "button radius small" %>
-  <% end %>
-  </div>
-  <div class="small-4 columns">
-    <h2>Or create your own</h2>
-    <%= link_to "Create your own meme", memes_path, :class=> "button small radius" %>
+<% title "Create your own meme :)" %>
+<div class="radius small-12 small-centered  large-8  large-centered medium-8 medium-centered columns demots-column" id="create-meme">
+  <div class="row">
+    <div class="small-12 columns">
+      <%= form_for @demot, html: { multipart: true } do |f| %>
+        <%= f.hidden_field :user_id, :value => current_user.id %>
+      <%= f.label :title %>
+      <%= f.text_field :title, class: "radius" %>
+      <%= f.label :image %>
+      <%= f.file_field :image %>
+      <%= f.submit "Upload", class: "button radius small", id: "upload" %>
+    <% end %>
+    </div>
+
+    <div class="small-12 columns" id="create-text">
+      <p>Or create one from the library</p>
+    </div>
+    <div class="small-12 columns">
+      <%= link_to "Go to the library", memes_path, :class=> "button small radius second-shade" %>
+    </div>
   </div>
 </div>
