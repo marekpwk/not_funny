@@ -32,6 +32,7 @@ gem 'spring',        group: :development
 gem 'will_paginate', '~> 3.0.6'
 gem "will_paginate-foundation"
 gem "twilio-ruby"
+gem "ancestry"
 group :development, :test do
   gem 'rspec-rails', '~> 2.0'
   gem  'table_print'
