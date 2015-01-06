@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20150105000630) do
   end
 
   add_index "comments", ["ancestry"], name: "index_comments_on_ancestry", using: :btree
+  add_index "comments", ["commentable_id", "commentable_type"], name: "index_comments_on_commentable_id_and_commentable_type", using: :btree
 
   create_table "demots", force: true do |t|
     t.string   "title"
