@@ -1,0 +1,4 @@
+<p><%= comment.user.name %></p>
+<p><%= comment.created_at.strftime('%b %d, %Y at %H:%M') %>
+<p><%= simple_format comment.body %></p>
+<p><%= nested_comments comment.children %></p>

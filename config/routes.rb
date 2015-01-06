@@ -32,6 +32,10 @@ Rails.application.routes.draw do
   post 'twilio/voice' => 'twilio#voice'
   post 'twilio/status' => 'twilio#status'
   post 'twilio/inbound' => 'twilio#inbound'
+ 
+  resources :demots do
+    resources :comments
+  end
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'

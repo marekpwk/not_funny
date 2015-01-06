@@ -27,6 +27,7 @@ module NotFunny3
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     #
 
+    config.autoload_paths += %W(#{config.root}/lib)
     #skip tests, assets & helpers
     config.generators.assets = false
     config.generators.helper = false   # config.i18n.default_locale = :de
