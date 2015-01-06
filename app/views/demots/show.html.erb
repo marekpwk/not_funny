@@ -6,4 +6,5 @@
   <div class="right-arrow">
     <%= link_to "❱", Demot.exists?(@demot.id + 1)? demot_path(@demot.id + 1) : "#"%>
   </div>
+  <%= nested_comments @demot.comments %>
 </div>
