@@ -3,7 +3,7 @@ class CommentsController < ApplicationController
     @parent_id = params.delete(:parent_id)
     @commentable = find_commentable
     @comment = Comment.new( :parent_id => @parent_id,
-                           :user_id => current_user.id,
+                           :user_id => @user, 
                            :commentable_id => @commentable.id,
                            :commentable_type => @commentable.class.to_s)
   end

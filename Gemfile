@@ -52,6 +52,7 @@ gem 'mini_magick'
 #Solve problem with using custom fonts with cloudfront
 gem 'font_assets'
 gem 'newrelic_rpm'
+gem 'table_print'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
