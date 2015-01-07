@@ -20,6 +20,7 @@ puts "Done with users,  starting to seed images..."
 demots = []
 images_height = %w{300 400 500 600 800}
 
+#seeding memes
 100.times do |i|
   url = "http://lorempixel.com/650/"
   url << images_height.sample << "/"
@@ -28,10 +29,11 @@ images_height = %w{300 400 500 600 800}
   demot = Demot.new(title: title, user: user, approved: true)
   image_url = url << themes.sample
   demot.remote_image_url = image_url
-  demots << demot
   demot.save
+  demots << demot
 end
 
+#seeding not approved memes
 5.times do |i|
   url = "http://lorempixel.com/650/"
   url << images_height.sample << "/"
@@ -40,10 +42,10 @@ end
   demot = Demot.new(title: title, user: user)
   image_url = url << themes.sample
   demot.remote_image_url = image_url
-  demots << demot
   demot.save
+  demots << demot
 end
-
+#seeding templates
 20.times do |i|
   url = "http://lorempixel.com/650/"
   url << images_height.sample << "/"
@@ -55,6 +57,7 @@ end
 end  
 
 puts "Done with images, populating votes now..."
+#seeding votes
 500.times do |i|
   vote = Vote.new(demot_id: demots[0..6].sample.id, user_id: users.sample.id)
   vote.save
@@ -63,4 +66,27 @@ end
  vote = Vote.new(demot_id: demots.sample.id, user_id: users.sample.id)
  vote.save
 end 
-puts "Done!!"
+
+puts "Done with votes, starting to seed comments now..."
+
+memes_to_comment = demots[0..10] +  demots.last(10)
+comments = []
+200.times do |i|
+  meme = memes_to_comment.sample
+  body = Faker::Lorem.sentence
+  comment = Comment.new(user_id: users.sample, commentable_id: meme.id, commentable_type: meme.class.to_s, body: body) 
+  comment.save
+  comments << comment
+end
+
+200.times do |i|
+  parent_id = comments.sample.id
+  commentable = memes_to_comment.sample
+  body = Faker::Lorem.sentence
+  comment = Comment.new(parent_id: parent_id, user_id: users.sample, commentable_id: commentable.id, commentable_type: commentable.class.to_s, body: body) 
+  comment.save
+  comments << comment
+end  
+
+
+puts "And done!!"
