@@ -11,7 +11,7 @@
   padding-bottom: 2%;
   padding-top: 2%;
   border: 1px solid #D9D9D9;
-  border-radius: 1%;
+  border-radius: 5px;
   margin-bottom: 1em;
 }
 .demots-column img {
@@ -48,7 +48,7 @@ nav.top-bar {
 .alert-form {
   background-color: #242222;
 }
-.main-container .alert-box.alert{
+.main-container .alert-box.alert {
   background-color: #B80707;
   border-color: #B80707;
 }
@@ -78,49 +78,51 @@ nav.top-bar {
   display: inline;
   font-size: 1em;
 }
+
 /* Butons */
 input[type="text"]{
- border-radius: 20px;
+  border-radius: 20px;
 }
-#upload{
- width: 100%;
+#upload {
+  width: 100%;
 }
-#create-meme .second-shade, #signin-page .second-shade, #signup-page .button{
+#create-meme .second-shade, #signin-page .second-shade, #signup-page .button {
   background-color: #943221;
   margin-bottom: 0;
   margin-top: 1%;
 }
-#create-meme .second-shade{
+#create-meme .second-shade {
   background-color: #943221;
   margin-bottom: 2%;
   margin-top: 2%;
 }
-#signup-page .button{
+#signup-page .button {
   margin-bottom: 0;
   margin-top: 1%;
 }
-.button.twitter{
+.button.twitter {
   background-color: #00aced;
 }
-.button.twitter:link, .button.twitter:active, .button.twitter:focus{
-  background-color:#00aced; 
+.button.twitter:link, .button.twitter:active, .button.twitter:focus {
+  background-color: #00aced;
 }
-.button.twitter:hover{
-  background-color:#68D5FF; 
+.button.twitter:hover {
+  background-color: #68D5FF;
 }
 
-.button.twitter:active{
-  background-color:#00aced; 
+.button.twitter:active {
+  background-color: #00aced;
 }
-.button.facebook{
+.button.facebook {
   background-color: #3a5795;
 }
-.button.facebook:link, .button.facebook:active{
-  background-color:#3a5795; 
+.button.facebook:link, .button.facebook:active {
+  background-color: #3a5795;
 }
-.button.facebook:hover{
-  background-color:#4D71BE;
+.button.facebook:hover {
+  background-color: #4D71BE;
 }
+
 /* Admin panel */
 table.admin-list {
   background-color: rgb(79, 79, 79);
@@ -171,14 +173,14 @@ input#search {
 .left-arrow {
   font-size: 4em;
   position: absolute;
-  top: 40%;
+  top: 15%;
   left: 14%;
 }
 
 .right-arrow {
   font-size: 4em;
   position: absolute;
-  top: 40%;
+  top: 15%;
   right: 14%;
 }
 .left-arrow a, .right-arrow a {
@@ -196,13 +198,34 @@ input#search {
 i.fi-social-twitter, i.fi-social-facebook {
   font-size: 1.4em;
 }
+
 /* .button.face { */
 /*   background-color: #3a5795; */
-/* } */
-.button.sharing-buttons.small {
-  padding-top: 0.4em;
-  padding-bottom: 0.4em;
-}
-.button.sharing-buttons span {
-  font-size: 1.2em;
-}
+/*
+} */
+  .button.sharing-buttons.small {
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+  }
+  .button.sharing-buttons span {
+    font-size: 1.2em;
+  }
+
+  /* comments */
+  p.comment-info {
+    font-size: 0.7em;
+    color:rgb(129, 116, 100);
+  }
+  .comment-box {
+    width: 100%;
+    border-bottom: 1px solid rgb(152, 130, 130);
+  }
+  a.comment-reply{
+    color: #A09999;
+  }
+  a.comment-reply:hover{
+    color: #FFFFFF;
+  }
+  .commnets{
+    width: 100%;
+  }

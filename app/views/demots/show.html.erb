@@ -6,5 +6,9 @@
   <div class="right-arrow">
     <%= link_to "❱", Demot.exists?(@demot.id + 1)? demot_path(@demot.id + 1) : "#"%>
   </div>
-  <%= nested_comments @demot.comments %>
+</div>
+<div class="radius small-12 small-centered  large-8  large-centered medium-8 medium-centered columns demots-column">
+  <h3>Comments:</h3>
+  <%= render "comments/form" %>
+  <%= nested_comments @comments %>
 </div>
