@@ -173,14 +173,14 @@ input#search {
 .left-arrow {
   font-size: 4em;
   position: absolute;
-  top: 15%;
+  top: 35%;
   left: 14%;
 }
 
 .right-arrow {
   font-size: 4em;
   position: absolute;
-  top: 15%;
+  top: 35%;
   right: 14%;
 }
 .left-arrow a, .right-arrow a {
@@ -191,6 +191,9 @@ input#search {
   color: rgb(218, 214, 214);
 }
 
+.single-meme-view{
+ position: relative;
+}
 /***  Admin columns ***/
 
 
