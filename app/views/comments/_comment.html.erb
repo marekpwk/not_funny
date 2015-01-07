@@ -1,5 +1,5 @@
 <div class="comment-box clearfix">
-  <p class="comment-info">Created by <%= comment.user.name %> on <%= comment.created_at.strftime('%b %d, %Y at %H:%M') %></p></br>
+  <p class="comment-info">Created by <%=comment.user ? comment.user.name : "Anonymous" %> on <%= comment.created_at.strftime('%b %d, %Y at %H:%M') %></p></br>
   <p><%= simple_format comment.body %></p></br>
   <%= link_to "Reply", new_polymorphic_path([@commentable, Comment.new], :parent_id => comment), class: "comment-reply left" %>
 </div>

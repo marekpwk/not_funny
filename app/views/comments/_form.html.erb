@@ -1,6 +1,8 @@
 <%= form_for [@commentable, @comment] do |f| %>
   <%= f.hidden_field :parent_id %>
-  <%= f.hidden_field :user_id, value: current_user.id%>
+<% if signed_in?  %>
+  <%= f.hidden_field :user_id, value: current_user.id %>
+<% end %>
 <%= f.label :body, "New comment" %>
 <%= f.text_area :body, :rows => 2, class: "radius" %>
 <%= f.submit "Post Comment", class: "button success radius tiny" %>

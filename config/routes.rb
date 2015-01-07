@@ -34,7 +34,7 @@ Rails.application.routes.draw do
   post 'twilio/inbound' => 'twilio#inbound'
  
   resources :demots do
-    resources :comments
+    resources :comments, only: [:new, :create]
   end
 
   # You can have the root of your site routed with "root"
