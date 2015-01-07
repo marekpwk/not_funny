@@ -1,5 +1,6 @@
 class DemotsController < ApplicationController
   require 'will_paginate/array'
+  include MemeUser::Commentable
   before_filter :signed_in_user, only: [:new, :create, :up, :down]
  
   def index
@@ -15,6 +16,8 @@ class DemotsController < ApplicationController
   end
 
   def show
+    # binding.pry
+    @commentable = find_commentable
     @demot = Demot.find(params[:id])
   end
 
@@ -74,4 +77,5 @@ class DemotsController < ApplicationController
   def demot_params
     params.require(:demot).permit(:title, :image, :user_id)
   end
+
 end
