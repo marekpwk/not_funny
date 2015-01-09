@@ -49,7 +49,8 @@ NOT FUNNY
 
    `DOMAIN` - your domain name
 
-##MMS - TWILIO  
+##Create memes from your cellphone
+
 For creating Memes from MMS messages this app uses Twilio services, to make this work you need [Twilio](https://www.twilio.com/) account, and the following environment variables setup:
 
 `TWILIO_ACCOUNT_SID` - Twilio Account SID
@@ -58,7 +59,7 @@ For creating Memes from MMS messages this app uses Twilio services, to make this
 
 `TWILIO_NUMBER` - Twilio number
 
-`MY_NUMBER` - Phone number confirmed with Twilio(I am using trial account, so I can send messages just to one number)
+`MY_NUMBER` - Phone number confirmed with Twilio(I am using trial account, so I can send and receive messages just from one number)
 
 `MMS_USER` - user id for mms user(currently all incoming MMS are asigned to one user)
 
