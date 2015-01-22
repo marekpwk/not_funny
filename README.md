@@ -29,6 +29,14 @@ NOT FUNNY
 
    `rails s`
 
+###Admin panel
+
+To access admin panel use:
+
+user: admin@example.com
+
+pass: password1  
+
 ##Storage
 
    In production this application uses AWS S3 for storage, so you need an [AWS S3](http://aws.amazon.com/s3/) account and following environment variables setup with AWS S3 info :
