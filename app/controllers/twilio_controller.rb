@@ -18,10 +18,10 @@ class TwilioController < ApplicationController
 
   def inbound
     user= User.find(ENV['MMS_USER'])
-    title = params[:Body].empty? ? "Sent from cell" : params[:body]
+    title = params[:Body].empty? ? "Sent from cell" : params[:Body]
     demot = Demot.new(title: title, user: user )
     demot.remote_image_url = params[:MediaUrl0]
-    demot.update_attribute(:mms, true)
+    demot.mms = true
     if demot.save
       response = Twilio::TwiML::Response.new do |r|
         r.SMS "Your message has been recieved."
