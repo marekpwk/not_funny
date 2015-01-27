@@ -6,6 +6,10 @@ describe Demot do
     @demot = FactoryGirl.build(:demot, user_id: @user.id)
   end
 
+  it "creates a valid record"do
+    expect(@demot).to be_valid
+  end
+
   it "is invalid without user" do
     @demot.user = nil
     expect(@demot).to_not be_valid
